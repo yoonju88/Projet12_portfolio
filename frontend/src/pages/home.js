@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link} from 'react-router-dom'
 
 function HomePage() {
     return (
         <div>
             <section id="presentation">
-                <h2>PRÉSENTATION</h2>
-                <p>Contenu de la section PRÉSENTATION...</p>
+                <h2>JE SUIS...</h2>
+                <Link to="/realisations"> voir mes réalisations</Link>
             </section>
             <section id="competences">
                 <h2>COMPÉTENCES</h2>

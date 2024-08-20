@@ -1,14 +1,44 @@
+
 header {
+    background-image: url('../images/pages/homepage/background_home.webp');
+    background-size : cover;
+}
+
+.menu_home {
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu_home ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    padding-left: 4rem;
+}
+
+.link {
+    position:absolute;
+    font-weight: medium;
+    text-decoration: none;
+}
+
+.link:hover {
+    font-weight: bold;
+}
+
+.menu {
     height:110px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-nav{
+
+.menu nav{
     padding-right: 5%;
 }
-
-ul {
+.menu ul {
     display: flex;
     flex-direction: row;
     column-gap: 35px;
@@ -20,21 +50,36 @@ li {
 
 a {
     text-decoration: none;
-    font-size: 18px; 
+    font-size: 20px; 
     color : #353641;
 }
 
-nav ul li a.active {
+.active {
     font-weight: bold;
+    text-decoration: underline 2px;
+    text-underline-offset: 10px;
 }
 
-.home_menu {
-    position: absolute; /* 절대 위치 설정 */
-    top: 100%; /* 홈 버튼 바로 아래에 위치 */
-    left: 0;
-    background-color: #444; /* 메뉴 배경 색상 */
-    width: 100%; /* 홈 버튼과 동일한 너비 */
+.banner{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-right: 120px;
+    margin-top: 200px;
+    color : #353641;
+}
+
+.banner_title {
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 110px;
+    text-align: end;
     margin: 0;
-    padding: 10px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+    
+}
+.banner_subtitle{
+    font-size: 30px;
+    font-weight: regular;
+    margin: 0;
+    padding-top: 10px;;
 }

@@ -1,41 +1,44 @@
-import React, {useState} from 'react'
-import { useSpring, animated } from '@react-spring/web';
-import { NavLink } from 'react-router-dom'
+import React from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import "./header.css"
 
 
 function Header() {
-    const [isCollapsed, setIsCollapsed]=useState(false)
-    const animationcollapsed = useSpring ({
-        opacity: isCollapsed ? 1 : 0,
-        transform : isCollapsed ? 'translateY(0)' : 'translateY(-20px)', 
-        display : isCollapsed ? 'block' : 'none',
-        height: isCollapsed ? 'auto' : '0px'
-    })
+    const location = useLocation()
+    const currentPage = location.pathname
 
-    const handleHomeClick = () => {
-        setIsCollapsed(!isCollapsed)
-    }
-
-return ( 
-    <header>
-        <nav>
-            <ul>
-                <li><NavLink to="/" activClassName='active' onClick={handleHomeClick}>HOME</NavLink></li>
-                {isCollapsed && (
-                <animated.span style={animationcollapsed} className="home_menu">
-                    <li><NavLink to="/#presentation" >Présentation</NavLink></li>
-                    <li><NavLink to="/#competences" >Compétences</NavLink></li>
-                    <li><NavLink to="/#contact" >Contact</NavLink></li>
-                </animated.span>
-                )}
-                <li>
-                    <NavLink to="/realisations" activClassName='active'>RÉALISATIONS</NavLink>
-                </li>
-            </ul>
-        </nav>
-    </header>
-)
+    return (
+        <header className={`${currentPage === '/' ? "menu_home" : "menu"}`}>
+            {currentPage === '/' ?
+                (
+                    <>
+                        <nav>
+                            <ul>
+                                <li><Link to="/#presentation" className='link'>PRÉSENTATION</Link></li>
+                                <li><Link to="/#realisations" className='link'>RÉALISATIONS</Link></li>
+                                <li><Link to="/#competences" className='link'>COMPÉTENCES</Link></li>
+                                <li><Link to="/#competences" className='link'>CONTACT</Link></li>
+                            </ul>
+                        </nav>
+                        <div className='banner'>
+                            <h1 className='banner_title'> BONJOUR, <br /> JE SUIS YOONJU HO</h1>
+                            <p className='banner_subtitle'>DÉVELOPPEUSE WEB, FRONT-END</p>
+                        </div>
+                    </>
+                )
+                : (
+                    <nav>
+                        <ul>
+                            <li><NavLink to="/" activClassName='active'>HOME</NavLink></li>
+                            <li>
+                                <NavLink to="/realisations" activClassName='active'>RÉALISATIONS</NavLink>
+                            </li>
+                        </ul>
+                    </nav>
+                )
+            }
+        </header>
+    )
 }
 
 export default Header
