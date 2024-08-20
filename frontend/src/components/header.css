@@ -1,0 +1,40 @@
+header {
+    height:110px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav{
+    padding-right: 5%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 35px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px; 
+    color : #353641;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+.home_menu {
+    position: absolute; /* 절대 위치 설정 */
+    top: 100%; /* 홈 버튼 바로 아래에 위치 */
+    left: 0;
+    background-color: #444; /* 메뉴 배경 색상 */
+    width: 100%; /* 홈 버튼과 동일한 너비 */
+    margin: 0;
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+}
