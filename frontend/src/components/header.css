@@ -29,7 +29,7 @@ header {
 }
 
 .menu {
-    height:110px;
+    height:6.5vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -43,32 +43,23 @@ header {
     flex-direction: row;
     column-gap: 35px;
 }
-
-li {
-    list-style-type: none;
-}
-
 a {
-    text-decoration: none;
     font-size: 20px; 
-    color : #353641;
+    color : var(--main-color);
 }
-
 .active {
     font-weight: bold;
     text-decoration: underline 2px;
     text-underline-offset: 10px;
 }
-
 .banner{
     display: flex;
     flex-direction: column;
     text-align: end;
     margin-right: 120px;
     margin-top: 200px;
-    color : #353641;
+    color : var(--main-color);
 }
-
 .banner_title {
     font-size: 100px;
     font-weight: bold;
