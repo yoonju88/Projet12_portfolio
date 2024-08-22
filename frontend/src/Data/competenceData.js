@@ -146,3 +146,26 @@ export const competenceData = [
         alt : 'Icône After Effects'
     },
 ]
+
+export const filterButtons = [
+    {
+        id: 'b1',
+        name : 'All',
+    },
+    {
+        id: 'b2',
+        name : 'Front-end',
+    },
+    {
+        id: 'b3',
+        name : 'Back-end',
+    },
+    {
+        id: 'b4',
+        name : 'Outils',
+    },
+    {
+        id: 'b5',
+        name : 'Graphique',
+    },
+]
