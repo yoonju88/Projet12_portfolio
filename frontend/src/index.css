@@ -30,7 +30,7 @@ li {
 
 h2 {
   font-weight: 600;
-  font-size: 4.5rem;
+  font-size: 5rem;
   line-height: 4.5rem;;
 }
 p {
@@ -43,8 +43,7 @@ img {
   object-fit: cover;
 }
 section {
-  height: 700px;
-  margin-top : 90px;
+  height: 800px;
 }
 /* button style */
 .button{
@@ -56,10 +55,10 @@ section {
   cursor: pointer;
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 600;
-  padding: 0.4em 1.8em;  
+  font-weight: 500;
+  padding: 0.15em 1.4em;  
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  width: 10em; 
+  min-width: 5em; 
 }
 /* focus : lorsqu'un bouton est ciblé du clavier ou d'un autre dispositif de saisie :focus active */
 .button:hover, .button:focus {

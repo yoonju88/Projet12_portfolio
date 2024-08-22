@@ -22,7 +22,7 @@ ul {
 }
 
 nav a {
-    font-size: 1.7rem; 
+    font-size: 1.5rem; 
     color : var(--main-color);
     position: relative;
 }
@@ -31,12 +31,12 @@ nav a {
     text-underline-offset: 10px;
 }
 
-a:hover{
+nav a:hover{
     color: var(--main-color);
     font-weight: bold;
   }
 
-a:before{
+nav a:before{
     content: '';
     position: absolute;
     bottom: -5px;
@@ -47,7 +47,7 @@ a:before{
     transform-origin: 50%;
   }
   
-a, a:before{
+nav a, nav a:before{
     -o-transition: 0.27s;
     -ms-transition: 0.27s;
     -moz-transition: 0.27s;
@@ -55,7 +55,7 @@ a, a:before{
     transition: 0.27s;
   }
   
-a:hover:before{
+nav a:hover:before{
     transform: scale(1);
   }
   

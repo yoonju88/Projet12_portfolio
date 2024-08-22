@@ -1,4 +1,5 @@
 .home_page {
+    min-height: 1000px;
     height: 100vh;
     width: 100vw;
     background-image: url(../images/pages/background_home.webp);
@@ -16,13 +17,10 @@
 }
 
 h1{
-    font-size: 10rem;
-    line-height: 10rem;
+    font-size: 8rem;
+    line-height: 8rem;    
 }
 .homeTxt_container p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
 }
-
-
-

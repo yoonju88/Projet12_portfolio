@@ -1,4 +1,4 @@
-.presentation, .realisations {
+.presentation {
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -6,34 +6,29 @@
 .presentation {
     gap: 100px;
 }
-
-.section_content {
+.presentation_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 8%;
-    gap: 50px
+    padding: 0 150px;
+    gap: 60px;
 }  
 
-.presentation_conten .button{
-    align-self: flex-start;
-}
-.presentation_content, .presentation_img {
+.presentation_container, .presentation_img {
     flex:1;
     max-width: 50%;
 } 
 
-.presentation_img img {
-    margin-left:100px;
+.profile_img {
+    max-height:100%;
+    width:auto;
 }
-.realisations {
-    flex-direction: row-reverse;
-}
+.presentation_img {
+    display: flex;
+    align-content: center;
+    margin-right: 100px
 
-.realisations_img {
-    width: 170%;
-    position:relative;
 }
 
 .realisations_img img {
@@ -59,7 +54,7 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 60px;
-    padding: 100px 50px;
+    padding: 50px 50px;
 }
 .item_container {
     text-align: center;
@@ -69,4 +64,28 @@
     display:flex;
     align-items: center;
     gap:30px
+}
+
+#competences {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 0 6vw;
+    margin-top: 50px;
+}
+
+.competence_description {
+    max-width: 60vw;
+    margin-top: 50px;
+}
+
+.filter_buttons {
+    align-self: center;
+}
+
+.button.active {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 400;
 }
