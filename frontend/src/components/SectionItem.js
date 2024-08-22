@@ -15,8 +15,7 @@ function SectionItem({ imageSrc, imageAlt, title, description, buttonName, name,
             ) : (
                 <div className= 'realisations_img'>
                     <img src={imageSrc} alt={imageAlt}  className='original'/>
-                    <img src={overlaySrc} alt="overlay" className='overlay' />
-                    
+                    <img src={overlaySrc} alt="overlay" className='overlay' />                    
                 </div>
             )
             }

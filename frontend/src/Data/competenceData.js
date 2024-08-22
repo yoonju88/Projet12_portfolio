@@ -18,7 +18,7 @@ import Id from '../images/icons/indesign.png'
 import Ae from '../images/icons/aftereffects.png'
 
 
-export const competenceList = [
+export const competenceData = [
      {
         id: 'a1',
         name : 'HTML5',

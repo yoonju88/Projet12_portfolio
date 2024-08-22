@@ -1,57 +1,28 @@
-.presentation, .realisations {
-    display:flex;
-    align-items: center;
+.home_page {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/pages/background_home.webp);
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
     justify-content: space-between;
 }
-.presentation {
-    gap: 100px;
+
+.homeTxt_container {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 15vh;
+    margin-left:10vw;
 }
 
-.section_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 8%;
-    gap: 50px
-}  
-
-.presentation_conten .button{
-    align-self: flex-start;
+h1{
+    font-size: 10rem;
+    line-height: 10rem;
 }
-.presentation_content, .presentation_img {
-    flex:1;
-    max-width: 50%;
-} 
-
-.presentation_img img {
-    margin-left:100px;
-}
-.realisations {
-    flex-direction: row-reverse;
+.homeTxt_container p {
+    font-size: 2.5rem;
+    font-weight: 400;
 }
 
-.realisations_img {
-    width: 170%;
-    position:relative;
-}
 
-.realisations_img img {
-    width:100%;
-    position:absolute;
-    top:-400px;
-    left:0;
-    transition : opacity 300ms ease-in-out;   
-}
 
-.overlay {
-    opacity: 0;
-}
-
-.realisations_img:hover .overlay{
-    opacity:0.3;
-}
-
-.realisations_img:hover .overlay_text {
-    opacity:1;
-}
