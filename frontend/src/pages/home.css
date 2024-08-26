@@ -1,7 +1,8 @@
 .home_page {
-    min-height: 1000px;
+    min-height: 800px;
+    max-height: 1000px;
     height: 100vh;
-    width: 100vw;
+    width:100vw;
     background-image: url(../images/pages/background_home.webp);
     background-size: cover;
     display: flex;
@@ -11,9 +12,8 @@
 
 .homeTxt_container {
     text-align: left;
-    margin-top: 0;
-    margin-bottom: 15vh;
-    margin-left:10vw;
+    margin-top: 200px;
+    margin-left :100px;
 }
 
 h1{

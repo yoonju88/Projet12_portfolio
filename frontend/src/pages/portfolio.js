@@ -1,12 +1,17 @@
 import React from 'react'
 import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 
 function Portfolio() {
     return (
-        <main className='portfolio_page'>
-            <Menu/>
-            <div> realisation page</div>
-        </main>
+        <>
+            <Menu />
+            <main className='portfolio_page'>
+
+                <div> realisation page</div>
+            </main>
+            <Footer />
+        </>
     )
 }
 

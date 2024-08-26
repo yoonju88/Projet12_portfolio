@@ -1,0 +1,37 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap :20px;
+    padding: 30px 60px;
+    width :100vw;
+
+}
+
+footer a{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.separator {
+    width: 2px;
+    height : 15px;
+    background-color: var(--main-color);
+}
+
+.footer_bg{
+    background-color: var(--main-color);
+    height : 60px;
+}
+.footer_bg .separator{
+    background-color: var(--sub-color);
+}
+
+.footer_bg a  {
+    color : var(--sub-color);
+}
+
+footer a:hover, .footer_bg a:hover {
+    font-weight: 500;
+}
