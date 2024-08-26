@@ -1,3 +1,7 @@
+.presentation_page{
+    padding : 0 0 230px 0;
+}
+
 .presentation {
     display:flex;
     align-items: center;
@@ -56,7 +60,11 @@
     grid-gap: 60px;
     padding: 50px 50px;
 }
-.item_container {
+.item_image{
+    width : 65px;
+    height :65px;
+}
+.item_container { 
     text-align: center;
 }
 

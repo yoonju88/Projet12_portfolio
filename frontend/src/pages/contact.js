@@ -4,13 +4,13 @@ import Footer from '../components/Footer'
 
 
 function Contact() {
-    return(
+
+    return (
         <>
-        <Menu/>
-        <main className='contact_page'>
-            
-        </main>
-        <Footer />
+            <Menu />
+            <main className='contact_page'>
+            </main>
+            <Footer />
         </>
     )
 }
