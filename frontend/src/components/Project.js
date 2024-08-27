@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-function Project({ title, image, alt, description, icons, href, className }) {
+function Project({ title, image, alt, description, icons, href, className, idName }) {
 
     return (
-        <article className={className}>
+        <article className={className} id={idName}>
             <div className="project_img_container">
                 <div className='project_img'>
                     <img src={''} alt={alt}/>

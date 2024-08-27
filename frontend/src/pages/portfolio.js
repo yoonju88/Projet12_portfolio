@@ -20,6 +20,7 @@ function Portfolio() {
                             image ={card.linkCover}
                             alt ={card.linkCoverAlt}
                             title={card.name}
+                            linkTo={card.linkTo}
                         />
                     ))}
                 </div>
@@ -35,6 +36,7 @@ function Portfolio() {
                         icons={project.icons}
                         href={project.codeLink}
                         className={project.array}
+                        idName={project.linkTo}
                         />
                     ))}
                 </section>
