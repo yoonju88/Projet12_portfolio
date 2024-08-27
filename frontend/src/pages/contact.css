@@ -1,0 +1,66 @@
+.contact_page {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.contact_container {
+    position:absolute;
+    padding: 60px 0px;
+    background-color: var(--sub-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    gap: 60px;
+    top: -150px;
+}
+.contact_container p{
+    width: 70%;
+    line-height: 1.5rem;
+    margin-top: 20px;;
+}
+.input_container input{
+    width: 60%;
+    max-width:60%;
+    overflow: auto;
+    margin-bottom: 20px;
+    padding:10px;
+    border: 0;
+    border-radius: 5px;
+}
+.input_container input::placeholder{
+    color: var(--main-color);
+    opacity: 0.6;
+    font-size: 18px;
+    position:absolute;
+    top:9px;
+}
+.input_container input:focus{
+    border-color: var(--main-color);
+}
+
+.text, .email {
+    height: 45px;
+}
+
+.message{
+    height: 120px;
+}
+.contact_container form button{
+    margin-top:30px;
+    border-width: 2px;
+    font-size: 22px;
+}
+
+.hidden_label {
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px; 
+    padding: 0; 
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0);
+    border: 0; 
+}
