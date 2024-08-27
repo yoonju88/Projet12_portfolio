@@ -1,5 +1,6 @@
 .presentation_page{
-    padding : 0 0 230px 0;
+    padding : 0 0 200px 0;
+
 }
 
 .presentation {
@@ -32,7 +33,6 @@
     display: flex;
     align-content: center;
     margin-right: 100px
-
 }
 
 .realisations_img img {
@@ -53,12 +53,21 @@
 .realisations_img:hover .overlay_text {
     opacity:1;
 }
+#competences {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 0 6vw;
+    margin-top: 50px;
+}
 
 .icons_container {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 60px;
     padding: 50px 50px;
+    justify-items: center;
 }
 .item_image{
     width : 65px;
@@ -68,20 +77,16 @@
     text-align: center;
 }
 
+.item_container p{
+    font-size: 18px;;
+}
+
 .filterButton_container {
     display:flex;
     align-items: center;
     gap:30px
 }
 
-#competences {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
-    padding: 0 6vw;
-    margin-top: 50px;
-}
 
 .competence_description {
     max-width: 60vw;
