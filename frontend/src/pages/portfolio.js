@@ -11,8 +11,11 @@ function Portfolio() {
         <>
             <Menu />
             <main className='portfolio_page'>
-                <section className="portfolio_title">
-                <h2>RÉALISATIONS</h2>
+                <section className="portfolio_links">
+                <div className='portfolio_title' >    
+                    <h2>RÉALISATIONS</h2>
+                    <p>Pendant la période de formation, j’ai participé à divers projets, résolu de nombreux problèmes et appris à écrire un code efficace axé sur l’utilisateur. Découvrez mes projets réalisés.</p>
+                </div>
                 <div className='linkCards'>
                     {realisationData.map(card => (
                         <LinkCard

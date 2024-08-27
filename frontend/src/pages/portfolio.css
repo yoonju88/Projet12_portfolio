@@ -3,18 +3,26 @@
     flex-direction: column;
 }
 
-.portfolio_title, .linkCard_container{
+.portfolio_links, .linkCard_container, .portfolio_title{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.portfolio_title h2 {
+    margin-bottom: 40px;
+}
+.portfolio_title p{
+    width : 80%;
+    text-align: center;
 }
 .linkCards{
     display: flex;
     flex-direction: row;
     gap :50px;
 }
-.portfolio_title{
+.portfolio_links{
+    margin-top: 30px;;
     gap: 100px;
 }
 .linkCard_container{
@@ -36,7 +44,6 @@
     align-items: center;
     position: relative;
 }
-
 .linkCard_container img{
     transform: scale(1);
     transition : transform 300ms ease-in-out; 
@@ -70,8 +77,8 @@
 .row, .row_reverse {
     display: flex;
     width:100%;
-    gap: 100px;
-    height : 600px;
+    gap: 50px;
+    height : 650px;
     align-items: center;
 }
 .row{
