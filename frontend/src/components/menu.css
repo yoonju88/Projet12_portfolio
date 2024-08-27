@@ -7,9 +7,18 @@
     padding-right: 60px;
 }
 
-.add_bg {
+.add_bg, .contact_menu {
     background-image: url(../images/pages/background_home.webp);
     background-size: cover;
+}
+
+.contact_menu{
+    height:35vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 60px;
+    padding-top: 20px;
 }
 nav {
     margin-left: 0;

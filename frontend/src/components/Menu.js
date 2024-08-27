@@ -8,7 +8,7 @@ function Menu() {
     const currentPage = location.pathname
 
     return (
-        <header  className={`${currentPage === '/' ? '' :  'add_bg'} menu`}>
+        <header  className={`${currentPage === '/' ? 'menu' : currentPage === '/contact' ? 'contact_menu':'add_bg menu' } `}>
             <nav>
                 <ul>
                     <li><NavLink to="/" activeClassName='active'>HOME</NavLink></li>                    
