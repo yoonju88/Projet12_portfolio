@@ -4,15 +4,15 @@ import Footer from '../components/Footer'
 import LinkCard from '../components/LinkCard'
 import {realisationData} from '../Data/realisationData'
 import Project from '../components/Project'
-import './portfolio.css'
+import './works.css'
 
-function Portfolio() {
+function Works() {
     return (
         <>
             <Menu />
-            <main className='portfolio_page'>
-                <section className="portfolio_links">
-                <div className='portfolio_title' >    
+            <main className='works_page'>
+                <section className="works_links">
+                <div className='works_title' >    
                     <h2>RÉALISATIONS</h2>
                     <p>Pendant la période de formation, j’ai participé à divers projets, résolu de nombreux problèmes et appris à écrire un code efficace axé sur l’utilisateur. Découvrez mes projets réalisés.</p>
                 </div>
@@ -49,4 +49,4 @@ function Portfolio() {
     )
 }
 
-export default Portfolio
+export default Works
