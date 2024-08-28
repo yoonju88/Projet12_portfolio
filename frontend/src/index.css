@@ -72,11 +72,24 @@ section {
 }
 /* focus : lorsqu'un bouton est ciblé du clavier ou d'un autre dispositif de saisie :focus active */
 .button:hover, .button:focus {
-  color: #fff;
+  color: var(--sub-color);
   outline: 0;
   box-shadow: 0 0 40px 40px var(--main-color) inset;
 }
 
+.btnv2{
+  display: flex;
+  align-items: center;
+}
 
+.button img{
+  width:20px;
+  margin-left:15px;
+  transition: filter 300ms ease-in-out;
+}
+
+.button:hover img {
+    filter: invert(1);
+}
 
 
