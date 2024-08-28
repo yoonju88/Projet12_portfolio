@@ -1,13 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-
+import gitHub from '../images/icons/gitHub.png'
 function Project({ title, image, alt, description, icons, href, className, idName }) {
 
     return (
         <article className={className} id={idName}>
             <div className="project_img_container">
                 <div className='project_img'>
-                    <img src={''} alt={alt}/>
+                    <img src={image} alt={alt}/>
                 </div>
                 <div className='project_icons'>
                     {icons.map((icon)=> (
@@ -18,7 +17,10 @@ function Project({ title, image, alt, description, icons, href, className, idNam
             <div className="project_txt_container">
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <Link to={href} className='button'>Voir mon code</Link>
+                <a href={href} className='button btnv2' target="_blank" rel="noreferrer">
+                    Voir mon code 
+                    <img src={gitHub} alt="icon code"/>
+                </a>
             </div>
         </article>
     )
