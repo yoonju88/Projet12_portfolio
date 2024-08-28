@@ -26,7 +26,7 @@ export const realisationData = [
         image: SophieV2,
         imageAlt: "Architecure Sophie Bluel, notebook",
         codeLink:"https://github.com/yoonju88/Architecte-sophie-bluel",
-        description: "Gestion des événements utilisateur et manipulation des éléments du DOM avec JavaScript.Création d'une page de connexion pour l'administrateur du site. Développement d'une modale pour uploader et supprimer des évenements dans la galerie.Communication avec une API pour intégrer ces fonctionnalités.",
+        description: "J’ai créé une page web dynamique avec JavaScript, y compris une page de connexion et une modale pour l’upload de médias. J’ai intégré une API pour le back-end et utilisé Figma",
         icons : [
             {src : html5, alt:'Icon html5'},
             {src : css3, alt:'Icon css3'},
@@ -44,7 +44,7 @@ export const realisationData = [
         image: KasaV2,
         imageAlt: "Kasa, notebook",
         codeLink:"https://github.com/yoonju88/projet_8_Kasa",
-        description: "Création d'un application de logement",
+        description: "J’ai créé une application web réactive avec React et React Router pour une navigation fluide. J’ai utilisé SASS pour des styles modulaires et ajouté des animations CSS pour enrichir l’expérience utilisateur. Ce projet illustre mon expertise en développement frontend moderne.",
         icons : [
             {src : html5, alt:'Icon html5'},
             {src : css3, alt:'Icon css3'},
@@ -61,7 +61,7 @@ export const realisationData = [
         image : argentbankV2,
         imageAlt : "ArgentBank, notebook",
         codeLink:"https://github.com/yoonju88/ArgentBank-website",
-        description: "implementer l'application avec react et redux",
+        description: "J’ai développé le front-end d’une application bancaire avec React et Redux, intégré des appels API REST pour une communication fluide avec le back-end, et utilisé Swagger pour définir les points d’accès de l’API. J’ai également travaillé avec Node.js côté serveur.",
         icons : [
             {src : html5, alt:'Icon html5'},
             {src : css3, alt:'Icon css3'},
@@ -81,7 +81,7 @@ export const realisationData = [
         image : EventsV2,
         imageAlt : "724events, notebook",
         codeLink:"https://github.com/yoonju88/Projet10-724events",
-        description: "débugger le site",
+        description: "J’ai examiné et corrigé les bugs d’un site one-page en utilisant Chrome DevTools et React Developer Tools. J’ai résolu les problèmes avec JavaScript et React, complété le cahier de recette avec des tests unitaires et fonctionnels, et utilisé Yarn et Node.js pour la gestion des dépendances et l’exécution des tests.",
         icons : [
             {src : html5, alt:'Icon html5'},
             {src : css3, alt:'Icon css3'},
