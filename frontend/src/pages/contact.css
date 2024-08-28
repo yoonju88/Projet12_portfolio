@@ -20,6 +20,8 @@
     line-height: 1.5rem;
     margin-top: 20px;;
 }
+
+/*Form style*/
 .input_container input{
     width: 60%;
     max-width:60%;
@@ -27,7 +29,10 @@
     margin-bottom: 20px;
     padding:10px;
     border: 0;
-    border-radius: 5px;
+    color: var(--main-color);
+    font-size: 17px;
+    background-color: white;
+    border-radius: 2px;;
 }
 .input_container input::placeholder{
     color: var(--main-color);
@@ -39,13 +44,22 @@
 .input_container input:focus{
     border-color: var(--main-color);
 }
-
+/* to maintain same background color even i complete input by autocomplete*/
+input:-webkit-autofill { 
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: var(--main-color) !important;
+    transition: background-color 5000s ease-in-out 0s; 
+}
 .text, .email {
     height: 45px;
 }
-
 .message{
     height: 120px;
+    vertical-align: top;
+}
+
+input:required:invalid:focus {
+border: 2px solid var(--main-color);
 }
 .contact_container form button{
     margin-top:30px;
