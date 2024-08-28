@@ -1,11 +1,11 @@
 import "./presentation.css"
-import Sectionitem from '../components/SectionItem'
+//import Sectionitem from '../components/SectionItem'
 import profileImage from '../images/pages/yoonju.webp'
-//import realisationImage from '../images/pages/realisation_img.webp'
-//import overlayImage from '../images/pages/bg_code.webp'
 import CompetenceList from '../containers/competanceList'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import YoonjuCV from '../images/pages/cv-yoonju.jpg'
+import download from '../images/icons/download.png'
 
 function Presentation() {
     return (
@@ -14,14 +14,17 @@ function Presentation() {
             <main className="presentation_page">
                 <div>
                     <section id="presentation" className='presentation'>
-                        <Sectionitem
-                            imageSrc={profileImage}
-                            imageAlt="Yoonju profile"
-                            title="JE SUIS..."
-                            description="Avec plusieurs années d'expérience dans le design graphique, mon intérêt dans ce domaine m'a conduit à étudier l'intégration web en utilisant des programmations créatives et innovantes. Aujourd'hui, je vous présente mes réalisations en tant que développeuse web."
-                            buttonName="Télécharge mon CV"
-                            name="presentation"
-                        />
+                    <div className='presentation_container'>
+                        <h2>JE SUIS...</h2>
+                        <p>Avec plusieurs années d'expérience dans le design graphique, mon intérêt dans ce domaine m'a conduit à étudier l'intégration web en utilisant des programmations créatives et innovantes. Aujourd'hui, je vous présente mes réalisations en tant que développeuse web.</p>
+                        <a href={YoonjuCV} download className='button btnv2'>
+                            Télécharger mon CV
+                            <img src= {download} alt="download icon" className="icon"/>
+                        </a>       
+                    </div>
+                    <div className='presentation_img'>
+                        <img src= {profileImage} alt="My profile" className='profile_img'  />
+                    </div>
                     </section>
                     {/* <section id="realisations" className='realisations'>
                     <Sectionitem

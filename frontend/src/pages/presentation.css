@@ -1,8 +1,6 @@
 .presentation_page{
     padding : 0 0 200px 0;
-
 }
-
 .presentation {
     display:flex;
     align-items: center;
@@ -87,7 +85,6 @@
     gap:30px
 }
 
-
 .competence_description {
     max-width: 60vw;
     margin-top: 50px;
@@ -96,7 +93,6 @@
 .filter_buttons {
     align-self: center;
 }
-
 .button.active {
     background-color: var(--main-color);
     color: white;
