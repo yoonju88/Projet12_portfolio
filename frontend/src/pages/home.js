@@ -2,6 +2,7 @@ import React from 'react'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import './home.css'
+import {Link} from 'react-router-dom'
 //import ProfileYJ from '../images/pages/yoonju.webp'
 
 

@@ -19,7 +19,7 @@ function Presentation() {
                         <p>Avec plusieurs années d'expérience dans le design graphique, mon intérêt dans ce domaine m'a conduit à étudier l'intégration web en utilisant des programmations créatives et innovantes. Aujourd'hui, je vous présente mes réalisations en tant que développeuse web.</p>
                         <a href={YoonjuCV} download className='button btnv2'>
                             Télécharger mon CV
-                            <img src= {download} alt="download icon" className="icon"/>
+                            <img src= {download} alt="download icon"/>
                         </a>       
                     </div>
                     <div className='presentation_img'>

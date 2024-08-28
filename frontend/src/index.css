@@ -11,8 +11,8 @@ html {
   margin :0;
 }
 :root {
-  --main-color:#313239;
-  --sub-color:#EBEFFA;
+  --text-color:#353641;
+  --main-color:#0066FF;
 }
 body {
   margin: 0 auto;
@@ -35,15 +35,17 @@ li {
 }
 
 h2 {
+  color:var(--main-color);
   font-weight: 600;
-  font-size: 4rem;
-  line-height: 4.5rem;;
+  font-size: 70px;
+  line-height: 70px;
 }
 
 p {
   font-weight: 300;
   font-size: 1.3rem;
   margin: 0 auto;
+  color : var(--text-color)
 }
 
 img {
@@ -72,7 +74,7 @@ section {
 }
 /* focus : lorsqu'un bouton est ciblé du clavier ou d'un autre dispositif de saisie :focus active */
 .button:hover, .button:focus {
-  color: var(--sub-color);
+  color: white;
   outline: 0;
   box-shadow: 0 0 40px 40px var(--main-color) inset;
 }
@@ -85,11 +87,12 @@ section {
 .button img{
   width:20px;
   margin-left:15px;
+  filter:invert(13%) sepia(95%) saturate(7500%) hue-rotate(210deg) brightness(94%) contrast(106%);
   transition: filter 300ms ease-in-out;
 }
 
-.button:hover img {
-    filter: invert(1);
-}
 
+.button:hover img {
+    filter: invert(1) brightness(100%);
+}
 

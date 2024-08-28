@@ -81,7 +81,7 @@ function Form ({setIsModalOpen}) {
         {errorMsg && (<p>{errorMsg}</p>)}
         <button type='submit' className='button'>
             {loading ? "En cours..." : "Envoyer" }
-        </button> :  
+        </button>
     </form>
     )
 }

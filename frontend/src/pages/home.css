@@ -1,26 +1,32 @@
 .home_page {
     min-height: 800px;
-    max-height: 1000px;
+    max-height: 1200px;
     height: 100vh;
     width:100vw;
-    background-image: url(../images/pages/background_home.webp);
+    background-image: url(../images/pages/new_bg.webp);
     background-size: cover;
     display: flex;
     flex-direction: column; /* Aligne les éléments en colonne */
-    justify-content: space-between;
 }
-
+.home_page main{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding : 0 100px;
+}
 .homeTxt_container {
-    text-align: left;
-    margin-top: 180px;
-    margin-left :100px;
+    text-align: center;
+    margin-top: 150px;
 }
 
 h1{
     font-size: 8rem;
-    line-height: 8rem;    
+    line-height: 8rem;   
+    color : white;
 }
 .homeTxt_container p {
     font-size: 2rem;
     font-weight: 400;
+    color:white;
 }

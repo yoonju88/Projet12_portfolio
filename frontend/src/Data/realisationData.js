@@ -21,7 +21,7 @@ export const realisationData = [
         name: "Architecture Sophie Bluel",
         array: "row",
         linkCover : SophieV1,        
-        linkCoverAlt : "Architecure Sophie Bluel, tablette",
+        linkCoverAlt : "Architecture Sophie Bluel, tablette",
         linkTo : "sophiebluel",
         image: SophieV2,
         imageAlt: "Architecure Sophie Bluel, notebook",

@@ -5,33 +5,27 @@ footer {
     gap :20px;
     padding: 30px 60px;
     width :100vw;
-    
 }
 
 footer a{
     font-size: 22px;
     font-weight: 400;
-    color: var(--main-color);
+    color: white;
 }
 
 .separator {
     width: 2px;
     height : 15px;
-    background-color: var(--main-color);
+    background-color: white;
 }
 
 .footer_bg{
-    background-color: var(--main-color);
+    background-image: url(../images/pages/new_bg.webp);
+    background-size: cover;
     height : 60px;
 }
-.footer_bg .separator{
-    background-color: var(--sub-color);
-}
 
-.footer_bg a  {
-    color : var(--sub-color);
-}
-
-footer a:hover, .footer_bg a:hover {
+footer a:hover {
     font-weight: 500;
+    color :white;
 }

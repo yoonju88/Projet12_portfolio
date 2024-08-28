@@ -24,7 +24,8 @@ function Contact() {
                     {isMolalOpen && (
                         <Modal 
                             onClick={()=> setIsModalOpen(!isMolalOpen)}
-                            message="Votre message a été envoyé avec succès. <br/> <span> Remarque : il s'agit d'une version de démonstration. Le message n'est pas réellement envoyée.</span>"
+                            message="Votre message a été envoyé avec succès."
+                            remarque ="Il s'agit d'une version de démonstration. Le message n'est pas réellement envoyée."
                             image={sendOk}
                             alt="sending success"
                         />

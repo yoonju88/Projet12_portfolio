@@ -7,17 +7,18 @@
 .contact_container {
     position:absolute;
     padding: 60px 0px;
-    background-color: var(--sub-color);
+    background-color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 60%;
+    width: 50%;
     gap: 60px;
-    top: -150px;
+    top: -170px;
+    box-shadow: 5px 5px 10px rgba(0, 102, 255, 0.2);
 }
 .contact_container p{
     width: 70%;
-    line-height: 1.5rem;
+    line-height: 22px;
     margin-top: 20px;;
 }
 
@@ -28,26 +29,26 @@
     overflow: auto;
     margin-bottom: 20px;
     padding:10px;
-    border: 0;
-    color: var(--main-color);
+    border: 2px solid rgba(164, 164, 165, 0.5);
+    color: var(--text-color);
     font-size: 17px;
     background-color: white;
     border-radius: 2px;;
 }
 .input_container input::placeholder{
-    color: var(--main-color);
+    color: var(--text-color);
     opacity: 0.6;
     font-size: 18px;
     position:absolute;
     top:9px;
 }
 .input_container input:focus{
-    border-color: var(--main-color);
+    border-color: white;
 }
 /* to maintain same background color even i complete input by autocomplete*/
 input:-webkit-autofill { 
     -webkit-box-shadow: 0 0 0 1000px white inset !important;
-    -webkit-text-fill-color: var(--main-color) !important;
+    -webkit-text-fill-color: var(--white-color) !important;
     transition: background-color 5000s ease-in-out 0s; 
 }
 .text, .email {
@@ -92,12 +93,12 @@ border: 2px solid var(--main-color);
 }
 
 .modal_container {
-    padding : 20px 30px;
+    padding : 20px 20px;
     position: relative;
     overflow: hidden;
     background: white;
     width: 550px;
-    height:260px;
+    height:300px;
     min-width: 550px;
     min-height: 260px;
 }
@@ -121,4 +122,27 @@ border: 2px solid var(--main-color);
 .modal_icon {
     width : 80px;
     height :80px;
+}
+
+.modal_message {
+    display: flex;
+    flex-direction: column;
+    gap :15px;
+}
+.remark_msg{
+    display: flex;
+    align-items: center;
+    padding : 0 40px;
+}
+
+.remark_msg img{
+    width: 17px;
+    height: 17px;
+}
+
+.remark_msg p{
+    color : #f51af2;
+    font-size: 17px;
+    line-height: 18px;
+    width:100%;
 }
