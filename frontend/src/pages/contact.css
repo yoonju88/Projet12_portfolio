@@ -2,10 +2,8 @@
     position:relative;
     display: flex;
     justify-content: center;
-    min-height: 70vh;
 }
 .contact_container {
-    position:absolute;
     padding: 60px 0px;
     background-color: white;
     display: flex;
@@ -13,7 +11,8 @@
     text-align: center;
     width: 50%;
     gap: 60px;
-    top: -170px;
+    margin-top: -170px;
+    margin-bottom: 110px;
     box-shadow: 5px 5px 10px rgba(0, 102, 255, 0.2);
 }
 .contact_container p{
@@ -23,7 +22,7 @@
 }
 
 /*Form style*/
-.input_container input{
+.input_container input, .message{
     width: 60%;
     max-width:60%;
     overflow: auto;

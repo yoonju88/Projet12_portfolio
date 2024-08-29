@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Field from '../components/Field'
+import Field, {FIELD_TYPES} from '../components/Field'
 
 function Form ({setIsModalOpen}) {
     const [loading, setLoading] = useState(false)    
@@ -54,6 +54,7 @@ function Form ({setIsModalOpen}) {
         <form onSubmit={handleSubmit}>
         <Field
             label='Nom et Prénom'
+            fieldType={FIELD_TYPES.INPUT_TEXT}
             type="text"
             id="nom"
             autoComplete="on"
@@ -64,6 +65,7 @@ function Form ({setIsModalOpen}) {
         <Field
             label='E-mail'
             type='email'
+            fieldType={FIELD_TYPES.EMAIL}
             id='email'
             autoComplete="on"
             value={formData.email}
@@ -71,7 +73,8 @@ function Form ({setIsModalOpen}) {
         />
         <Field
             label='Message'
-            type='text'
+            type='textarea'
+            fieldType={FIELD_TYPES.TEXTAREA}
             id='message'
             autoComplete="on"
             value={formData.message}
