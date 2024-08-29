@@ -1,9 +1,13 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 function LinkCard ({image, alt, title, linkTo}){
-    const href = `#${linkTo}`
+    const handleClick = () => {
+        window.location.hash =linkTo;
+    } 
+
    return (
-    <a href={href}>  
+    <Link to={`#{linkTo}`} onClick= {handleClick}>  
         <article className="linkCard_container">   
             <div className="linkCard_img">            
                 <img src={image} alt={alt}/>
@@ -11,7 +15,7 @@ function LinkCard ({image, alt, title, linkTo}){
             </div>
             <p className="linkCard_name">{title}</p> 
         </article>
-     </a>
+     </Link>
    )
 }
 
