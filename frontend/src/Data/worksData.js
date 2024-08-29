@@ -1,7 +1,7 @@
 import SophieV1 from "../images/pages/realisations/sophie_v1.webp" 
 import SophieV2 from "../images/pages/realisations/sophie-v2.webp" 
 import KasaV1 from "../images/pages/realisations/kasa_v1.webp"
-import KasaV2 from "../images/pages/realisations/kasa-v2.webp"
+import KasaV2 from "../images/pages/realisations/kasa_v2.webp"
 import argentbankV1 from "../images/pages/realisations/argentbank_v1.webp"
 import argentbankV2 from "../images/pages/realisations/argentbank-v2.webp"
 import EventsV1 from "../images/pages/realisations/724events_v1.webp"
@@ -15,7 +15,7 @@ import redux from "../images/icons/redux.png"
 import MongoDB from "../images/icons/mongoDB.png"
 import Debug from "../images/icons/debug.png"
 
-export const realisationData = [
+export const worksData = [
     {
         id:  "c1",
         name: "Architecture Sophie Bluel",

@@ -6,16 +6,18 @@ function ServiceItem ({icon, iconAlt, title, description}) {
         setIsOpened(!isOpened)
     }
     return (
-        <li onClick={handleCollapse} className={`${isOpened? 'opened' : ''} "serviceItem"`} >
-                <div className="serviceIcon_container">
-                    <img src={icon} alt={iconAlt} />
-                </div>
-                <div className="service_txt_container">
+        <li onClick={handleCollapse} className={`${isOpened? 'opened' : ''} serviceItem`} >
+                <div className="serviceItem_title">
+                    <div className="serviceIcon_container">
+                        <img src={icon} alt={iconAlt} />
+                    </div> 
                     <h4>{title}</h4>
-                    {isOpened && (
-                        <p>{description}</p>
-                    )}
-                </div>
+                </div>           
+                {isOpened && (
+                    <div className={`description_box ${isOpened ? 'visible' : 'hidden'}`}>
+                    <p>{description}</p>
+                    </div>
+                )}
         </li>
     )
 }

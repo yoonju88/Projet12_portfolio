@@ -15,6 +15,13 @@ function Home() {
                     <h1>YOONJU <br /> TERRENOIRE</h1>
                     <p>DÉVELOPPEUSE WEB, FRONT END</p>
                 </div>
+                <Link to="/about_me">
+                    <div className='arrow_container'>
+                        <span className="arrow"></span>
+                        <span className="arrow"></span>
+                        <span className="arrow"></span>
+                    </div>
+                </Link>
             </main>
             <Footer />
         </div>

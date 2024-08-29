@@ -5,15 +5,18 @@
     width:100vw;
     background-image: url(../images/pages/new_bg.webp);
     background-size: cover;
+    background-position: center center;
     display: flex;
     flex-direction: column; /* Aligne les éléments en colonne */
 }
+
 .home_page main{
     flex:1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding : 0 100px;
+    align-items: center;
 }
 .homeTxt_container {
     text-align: center;
@@ -30,3 +33,72 @@ h1{
     font-weight: 400;
     color:white;
 }
+/*
+.arrow-container {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(0deg);
+    transition: transform 0.4s ease;
+}
+
+
+.arrow-container:hover{
+    cursor: pointer;
+}
+.arrow-container:hover .arrow {
+    top: 50%;
+}
+
+.arrow-container:hover .arrow::before {
+    transform: translate(-50%, -50%) rotateZ(-30deg);
+}
+
+.arrow-container:hover .arrow::after {
+    transform: translate(-50%, -50%) rotateZ(30deg);
+}
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    transition: all 0.4s ease;
+}
+
+.arrow::before,
+.arrow::after {
+    transition: all 0.4s ease;
+    content: '';
+    display: block;
+    position: absolute;
+    transform-origin: bottom right;
+    background: #fff;
+    width: 4px;
+    height: 50px;
+    border-radius: 10px;    
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+
+.arrow::after {
+    transform-origin: bottom left;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+.arrow:nth-child(1) {
+    opacity: 0.3;
+    top: 15%;
+}
+
+.arrow:nth-child(2) {
+    opacity: 0.6;
+    top: 30%;
+}
+
+.arrow:nth-child(3) {
+    opacity: 0.9;
+    top: 45%;
+}
+
+*/

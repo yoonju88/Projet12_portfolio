@@ -2,7 +2,7 @@ import React from 'react'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import LinkCard from '../components/LinkCard'
-import {realisationData} from '../Data/realisationData'
+import {worksData} from '../Data/worksData'
 import Project from '../components/Project'
 import './works.css'
 
@@ -17,7 +17,7 @@ function Works() {
                     <p>Pendant la période de formation, j’ai participé à divers projets, résolu de nombreux problèmes et appris à écrire un code efficace axé sur l’utilisateur. Découvrez mes projets réalisés.</p>
                 </div>
                 <div className='linkCards'>
-                    {realisationData.map(card => (
+                    {worksData.map(card => (
                         <LinkCard
                             key = {card.id}
                             image ={card.linkCover}
@@ -29,7 +29,7 @@ function Works() {
                 </div>
                 </section>
                 <section className ="realisations">
-                    { realisationData.map (project => (
+                    { worksData.map (project => (
                         <Project
                         key={project.name}
                         title={project.name}
