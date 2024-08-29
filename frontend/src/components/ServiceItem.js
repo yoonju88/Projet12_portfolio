@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 function ServiceItem ({icon, iconAlt, title, description}) {
     const [isOpened, setIsOpened] = useState(false)
@@ -6,18 +7,20 @@ function ServiceItem ({icon, iconAlt, title, description}) {
         setIsOpened(!isOpened)
     }
     return (
-        <li onClick={handleCollapse} className={`${isOpened? 'opened' : ''} serviceItem`} >
-                <div className="serviceItem_title">
-                    <div className="serviceIcon_container">
-                        <img src={icon} alt={iconAlt} />
-                    </div> 
-                    <h4>{title}</h4>
-                </div>           
-                {isOpened && (
+        <li className="serviceItem" >
+            <div onClick={handleCollapse} className="serviceItem_title">
+                <div className="serviceIcon_container">
+                    <FontAwesomeIcon icon={icon}/>
+                </div> 
+                <h4 >{title}</h4>
+                { isOpened && (
                     <div className={`description_box ${isOpened ? 'visible' : 'hidden'}`}>
-                    <p>{description}</p>
+                        {description.map(text=>(
+                            <p key={text.id}>{text.text}</p>
+                        ))}
                     </div>
-                )}
+                )}                
+            </div>
         </li>
     )
 }
