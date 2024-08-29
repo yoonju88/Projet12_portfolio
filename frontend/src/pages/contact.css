@@ -15,6 +15,10 @@
     margin-bottom: 110px;
     box-shadow: 5px 5px 10px rgba(0, 102, 255, 0.2);
 }
+/*
+width: calc (100% -50px);
+*/
+
 .contact_container p{
     width: 70%;
     line-height: 22px;
