@@ -24,7 +24,7 @@ function ServiceItem ({icon, iconAlt, title, description}) {
             <div 
                 onClick={handleCollapse} 
                 className="serviceItem_container"
-                style={{height: `${itemHeight}px`, transition: "height 0.3s ease"}}   
+                style={{height: `${itemHeight}px`, transition: "height 0.3s ease-in-out"}}   
             >
                 
                 <div className ="service-title">
@@ -36,7 +36,7 @@ function ServiceItem ({icon, iconAlt, title, description}) {
                 {isOpened && (
                     <div 
                         className='description_box'
-                        style={{opacity: `${opacity}`, transition: "opacity 1s ease"}}
+                        style={{opacity: `${opacity}`, transition: "opacity 0.5s ease"}}
                     >
                     {description.map(text=>(
                         <p key={text.id}>{text.text}</p>
