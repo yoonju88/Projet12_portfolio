@@ -84,27 +84,33 @@
     width: 100%;
 }
 
-.serviceItem_title {
+ .serviceItem_container, .service-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.serviceItem_container {
+    position: relative;
     cursor : pointer;
-    margin-bottom: 20px;
     color : var(--main-color);
-    font-size: 50px; 
-    padding: 30px 0;
+    font-size: 50px;    
     border : 3px solid var(--main-color);
     border-radius: 10px;
     min-width: 250px;
-    overflow: hidden;
+    min-height: 170px;
+    padding: 20px 0;
+    display: block; 
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
-.serviceItem_title h4 {
+
+.serviceItem_container h4 {
     font-size: 20px;    
 }
 .description_box{
-    padding: 20px;
-    opacity: 0;
+    position: absolute;    
+    padding: 10px 20px 0 20px;;
     transition : opacity 0.5s ease;
     display: flex;
     flex-direction: column;
@@ -112,8 +118,6 @@
     align-items: center;  
     max-width: 245px;
     margin-top: 20px;
-    transition: opacity 0.5s ease;
-     
 }
 .description_box> p{
     font-size: 16px;
@@ -121,14 +125,17 @@
     margin-bottom: 10px;
     line-height: 17px;
     text-align: center;
+    transition: color 300ms ease-in-out;
 }
 
-.description_box.visible {
-    opacity: 1;
-    max-height: 250px;
+.serviceItem_container:hover, 
+.serviceItem_container:focus {
+    color: white;
+    outline:0;
+    box-shadow: 0px 0px 100px 100px var(--main-color) inset;
 }
 
-.description_box.hidden {
-    opacity: 0;
-    max-height: 0px;
+.serviceItem_container:hover p, 
+.serviceItem_container:focus p {
+    color: white;
 }
