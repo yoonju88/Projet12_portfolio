@@ -1,38 +1,34 @@
-
-.error {
+.error_page {
     padding : 100px 0;
 }
-
 .error_container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    gap : 15px;
-    height:auto;
 }
-
-.error_container h1 {
-    margin-top :0;
+.error_container h1,
+.errorPage_message {
     color:#f51af2;
-    font-size: 120px;;
+    margin-bottom: 20px;
 }
-.error_container p {
-    font-size: 30px;
-    color:#f51af2;
+.errorPage_message {
+    font-size: 28px;
 }
-
-.error_container div {
-    margin-top : 50px;
-    
+.error_btn_container{
+    margin: 20px 0;
 }
-.error_container a {
-    font-size: 20px;
+.error_btn_container img {
+    width: 15px;
 }
-
-.error_container > div > a > img {
-    width: 17px;
-    height: auto;
-
+@media screen and (max-width:1024px) {
+    .errorPage_message {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:768px) {
+    .errorPage_message {
+        font-size: 20px;
+        width: calc(100% - 50px);
+    }
 }

@@ -15,16 +15,11 @@
     margin-bottom: 110px;
     box-shadow: 5px 5px 10px rgba(0, 102, 255, 0.2);
 }
-/*
-width: calc (100% -50px);
-*/
-
 .contact_container p{
     width: 70%;
     line-height: 22px;
     margin-top: 20px;;
 }
-
 /*Form style*/
 .input_container input, textarea{
     width: 60%;
@@ -60,7 +55,6 @@ textarea {
     height: 120px;
     vertical-align: top;
 }
-
 input:required:invalid:focus {
 border: 2px solid var(--main-color);
 }
@@ -69,7 +63,6 @@ border: 2px solid var(--main-color);
     border-width: 2px;
     font-size: 22px;
 }
-
 .hidden_label {
     position: absolute; 
     width: 1px; 
@@ -80,7 +73,6 @@ border: 2px solid var(--main-color);
     clip: rect(0, 0, 0, 0);
     border: 0; 
 }
-
 .modal_overlay {
     position: fixed;
     width: 100%;
@@ -93,7 +85,6 @@ border: 2px solid var(--main-color);
     align-items: center;
     z-index: 1000;
 }
-
 .modal_container {
     padding : 20px 20px;
     position: relative;
@@ -104,14 +95,12 @@ border: 2px solid var(--main-color);
     min-width: 550px;
     min-height: 260px;
 }
-
 .modal_close_icon {
     position: absolute;
     top: 15px;
     right: 15px;
     max-width: 20px;
 }
-
 .modal_content {
     display: flex;
     flex-direction: column;
@@ -120,12 +109,10 @@ border: 2px solid var(--main-color);
     height: 100%;  
     gap :15px;
 }
-
 .modal_icon {
     width : 80px;
     height :80px;
 }
-
 .modal_message {
     display: flex;
     flex-direction: column;
@@ -136,25 +123,21 @@ border: 2px solid var(--main-color);
     align-items: center;
     padding : 0 40px;
 }
-
 .remark_msg img{
     width: 17px;
     height: 17px;
 }
-
 .remark_msg p{
     color : #f51af2;
     font-size: 17px;
     line-height: 18px;
     width:100%;
 }
-
 @media screen and (max-width:1024px) {
     .contact_container {
         width: calc(100% - 30%);
     }
 }
-
 @media screen and (min-width: 375px) and (max-width:768px) {
     .contact_container {
         width: calc(100% - 10%);
@@ -177,12 +160,10 @@ border: 2px solid var(--main-color);
     .input_container input {
         height: 40px;
     }
-  
     .contact_container form button{
         margin-top: 10px;
         font-size: 16px;
     }
-
     .modal_container {
         width: 350px;
         height:200px;

@@ -9,13 +9,13 @@ function NotFound (){
     return (
         <>
             <Menu />
-            <main className='error'>
+            <main className='error_page'>
                 <section className='error_container'>
-                    <div>
+                    <div className="error_txt_container">
                         <h1>404</h1>
                         <p className='errorPage_message'>La page que vous demnadez n'existe pas.</p>
                     </div>
-                    <div>    
+                    <div className="error_btn_container">    
                         <Link to="/" className='button btnv2'>                             
                             Retour à l'acceuil 
                             <img src={Return} alt="return icon"/>

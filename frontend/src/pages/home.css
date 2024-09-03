@@ -4,14 +4,15 @@
     width:100vw;
     background-image: url(../images/pages/new_bg.webp);
     background-size: cover;
-    background-position: center center;
+    background-position: center;
+}
+.home_page,
+.home_page main {
     display: flex;
-    flex-direction: column; /* Aligne les éléments en colonne */
+    flex-direction: column;
 }
 .home_page main{
     flex:1;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -20,7 +21,7 @@
 }
 h1{
     font-size: 125px;
-    line-height: 125px;   
+    line-height: 1;  
     color : white;
 }
 .homeTxt_container p {
@@ -28,21 +29,33 @@ h1{
     font-weight: 400;
     color:white;
 }
-
 @media screen and (max-width:1024px) {
     h1{
-        font-size: 100px;
-        line-height : 90px;    
+        font-size: 100px;   
     }
     .homeTxt_container p{
         font-size: 25px;
     }
 }
-
-@media screen and (min-width: 375px) and (max-width:768px) {
+@media screen and (max-width:768px) {
     h1{
-        font-size: 50px;
-        line-height : 50px;    
+        font-size: 80px;
+    }
+    .homeTxt_container p{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:768px) {
+    h1{
+        font-size: 70px;
+    }
+    .homeTxt_container p{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:440px) {
+    h1{
+        font-size: 55px;
     }
     .homeTxt_container p{
         font-size: 20px;

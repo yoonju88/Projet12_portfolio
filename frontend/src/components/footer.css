@@ -6,30 +6,24 @@ footer {
     padding: 30px 60px;
     width :100vw;
 }
-
 footer a{
     font-size: 22px;
     font-weight: 400;
     color: white;
 }
-
 .separator {
     width: 2px;
     height : 15px;
     background-color: white;
 }
-
 .footer_bg{
     background-image: url(../images/pages/new_bg.webp);
     background-size: cover;
     height : 60px;
 }
-
 footer a:hover {
     font-weight: 500;
-    color :white;
 }
-
 @media screen and (max-width:1024px) {
     footer {
         justify-content: center ;
@@ -38,12 +32,11 @@ footer a:hover {
         font-size: 18px;
     }
 }
-
-@media screen and (min-width: 375px) and (max-width:767px) {
+@media screen and (max-width:767px) {
     footer {
         justify-content: center ;
     }
     footer a{
-        font-size: 15px;
+        font-size: 17px;
     }
 }

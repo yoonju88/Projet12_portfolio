@@ -1,45 +1,51 @@
-
 .presentation_page section{
     padding:0 50px;
 }
 .presentation_container,
-#competences, 
+.competences, 
 .services {
     gap: 50px;
 } 
-.presentation {
+.presentation, .presentation_container {
     display:flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
 }
 .presentation_container, .presentation_img {
     max-width: 50%;
 } 
-.presentation_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.presentation {
+    justify-content: space-between;
+    flex-direction: row;
+}
+.presentation_container, 
+.competences,
+.item_container {
     text-align: center;
+}
+.presentation_container {
+    flex-direction: column;
     padding: 7% 4%;
     width:100%;
 }  
 .presentation_img {
-    padding: 7%;
+    padding: 6%;
     width:100%;
     display: flex;
     align-content: center;
     justify-content: center;
 }
-#competences {
-    text-align: center;
+.competences {
     display: flex;
     flex-direction: column;
     margin:0;
 }
-.icons_container {
+.icons_container, 
+.filter_buttons,
+.services > ul {
     display: flex;
     flex-wrap: wrap;
+}
+.icons_container {
     grid-gap: 60px;
     padding: 30px 0px 30px 0px;
     justify-content: center;
@@ -49,21 +55,15 @@
     height : 65px;
     margin: 0 15px;
 }
-.item_container { 
-    text-align: center;
-}
 .item_container p{
     font-size: 18px;
 }
-.competence_description,  {
+.competence_description {
     width: 80%;
     margin-top: 50px;
 }
-
 .filter_buttons {
-    display: flex;
     align-self: center;
-    flex-wrap: wrap;
     justify-content: center;
 }
 .button.active {
@@ -71,28 +71,24 @@
     color: white;
     font-weight: 400;
 }
+.serviceItem_container, 
+.service-title_container,
 .services {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+.services {
+    justify-content: center;
     text-align: center;
 }
 .services > ul {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     width:100%;
     gap: 50px;
 }
 .services p{
     margin:0;
-}
-.serviceItem_container, 
-.service-title_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .serviceItem {
     flex-basis: 21%;
@@ -132,16 +128,13 @@ h4 {
 .serviceItem_container:focus {
     background-color: var(--main-color);
 }
-
 .serviceItem_container:hover p, 
 .serviceItem_container:hover .service-title_container,
 .serviceItem_container:focus p, 
 .serviceItem_container:focus .service-title_container {
     color: white;
 }
-
-@media screen and (max-width:1037px) {
-    
+@media screen and (max-width:1044px) {
     .services > ul {
         gap: 30px;
         justify-content: space-around;
@@ -149,20 +142,18 @@ h4 {
     .serviceItem {
         flex-basis: calc(50% - 30px);
     }
-    .serviceItem_container {
+    .serviceItem_container,
+    .description_box {
         width:100%;
-        min-height: 180px;
     }
-    .description_box{  
-        max-width: 100%;
+    .serviceItem_container {
+        min-height: 180px;
     }
     .filter_buttons{
         gap: 20px;
     }
 }
-
-
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
     .presentation_page section{
         padding:0 30px;
     }
@@ -171,7 +162,7 @@ h4 {
     .services {
         gap: 30px;
     } 
-    #competences{
+    .competences {
         background-color: rgba(0, 102, 255, 0.1);
         padding: 50px 0 30px 0;
     }
@@ -182,7 +173,8 @@ h4 {
     .presentation {
         flex-direction: column-reverse;
     }
-    .presentation_container, .presentation_img {
+    .presentation_container, 
+    .presentation_img {
         max-width: 100%;
     } 
     .presentation_img {
@@ -199,10 +191,10 @@ h4 {
     .item_image{
         width : 50px;
         height : 50px;
-        margin: 0;
+        margin: 0 10px;
     }
     .item_container p{
-        font-size: 13px;
+        font-size: 14px;
     }
     .filter_buttons{
         gap: 25px;
@@ -213,8 +205,11 @@ h4 {
         padding: 5px 15px;
         font-size: 14px;
     }
+    .serviceItem_container {
+        font-size: 35px;  
+        min-height: 150px;
+    }
 }
-
 @media (max-width: 554px) {
     .presentation_page section{
         padding:0 20px;
@@ -226,9 +221,11 @@ h4 {
         gap: 20px;
         padding : 0 30px;
     }
-    
+    .serviceItem_container {
+        font-size: 25px;  
+        min-height: 130px;
+    }
 }
-
 @media (max-width: 450px){
     .serviceItem {
         flex-basis: 100%;

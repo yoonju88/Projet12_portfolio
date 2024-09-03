@@ -1,34 +1,28 @@
-.menu {
+.menu, .contact_menu {
     display: flex;
-    align-content: center;
-    align-items: center;
     justify-content: flex-end;
+}
+.menu {
+    align-items: center;
     padding:25px 60px 25px 0;
 }
-
 .add_bg, .contact_menu {
     background-image: url(../images/pages/new_bg.webp);
     background-size: cover;
 }
-
 .contact_menu{
     padding:20px 60px 260px 0;
-    display: flex;
     align-items: flex-start;
-    justify-content: flex-end;
     padding-right: 60px;
     padding-top: 20px;
 }
 nav {
     margin-left: 0;
 }
-
 ul {
     display: flex;
-    flex-direction: row;
     gap:35px;
 }
-
 nav a {
     font-size: 24px; 
     font-weight: 300;
@@ -43,9 +37,7 @@ nav a {
 }
 nav a:hover {
     font-weight: bold;
-  }
-
-
+}
 .underLine:before{
     content: '';
     position:absolute;
@@ -55,8 +47,7 @@ nav a:hover {
     background-color: white;
     transform: scale(0);
     transform-origin: 50%;
-}
-  
+}  
 .underLine, .underLine:before{
     -o-transition: 0.27s;
     -ms-transition: 0.27s;
@@ -64,11 +55,9 @@ nav a:hover {
     -webkit-transition: 0.27s;
     transition: 0.27s;
 }
-  
 .underLine:hover:before{
     transform: scale(1);
 }
-
 @media screen and (max-width:1024px) {
     .menu {
         padding:25px 40px 25px 25px;
@@ -77,22 +66,26 @@ nav a:hover {
     font-size: 20px;
     }
 }
-
-@media screen and (min-width: 375px) and (max-width:768px) {
+@media screen and (max-width:768px) {
     .menu {
-        padding:25px 25px 25px 25px;
-        justify-content: center;
-    }
-    ul {
-    gap: 20px;
-    padding-inline-start: 0;
-    }
-
-    nav a {
-    font-size: 15px;
+        padding:25px; 
     }
     .contact_menu{
-        justify-content: center;
         padding-right: 0;
+    }
+    .menu, .contact_menu {
+        justify-content: center;
+    }
+    nav a {
+    font-size: 18px;
+    }
+    ul {
+        gap: 18px;
+        padding-inline-start: 0;
+    }
+}
+@media screen and (max-width:450px) {
+    nav a {
+        font-size: 15px;
     }
 }
