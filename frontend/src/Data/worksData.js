@@ -18,7 +18,7 @@ import Debug from "../images/icons/debug.png"
 export const worksData = [
     {
         id:  "c1",
-        name: "Architecture Sophie Bluel",
+        name: "Architecture Sophie.B",
         array: "row",
         linkCover : SophieV1,        
         linkCoverAlt : "Architecture Sophie Bluel, tablette",

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import closeIcon from '../images/icons/close.png'
 import React/*, {useEffect}*/ from 'react'
-import attention from '../images/icons/attention.png'
+//import attention from '../images/icons/attention.png'
 
 function Modal ({message, image, alt, onClick, remarque}) {
 

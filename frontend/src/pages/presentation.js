@@ -26,7 +26,7 @@ function Presentation() {
                         <img src= {profileImage} alt="My profile" className='profile_img'  />
                     </div>
                 </section>
-                <section id="competences">
+                <section id="competences" className="competences">
                     <div className="competences_txt">
                         <h2>COMPÉTENCES</h2>
                         <p className="competence_description">J’ai acquis des compétences en développement front-end, ainsi qu’une maîtrise de Node.js pour la communication avec le serveur. Concernant les logiciel, j’ai de l’experience avec les outils Adobe.</p>
@@ -35,6 +35,7 @@ function Presentation() {
                 </section>
                 <section className="services">
                     <h2>MES SERVICES</h2>
+                    <p>Je vous propose des services de développement web adaptés à vos besoins.</p>
                     <ul>
                     {serviceData.map(item => (
                          <ServiceItem

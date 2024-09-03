@@ -10,7 +10,7 @@ function ServiceItem ({icon, iconAlt, title, description}) {
     }
     useEffect(() => {
         if (isOpened) {
-            setItemHeight ('285');
+            setItemHeight ('1000');
             setOpacity('1')
         } else if (!isOpened) {
             setItemHeight('0')
@@ -23,10 +23,10 @@ function ServiceItem ({icon, iconAlt, title, description}) {
         <li className="serviceItem" >
             <div 
                 onClick={handleCollapse} 
-                className="serviceItem_container serviceItem-position"
-                style={{height: `${itemHeight}px`, transition: "height 0.3s ease-in-out"}}   
+                className="serviceItem_container"
+                style={{maxHeight: `${itemHeight}px`, transition: "max-height 300ms ease-in-out"}}   
             >
-                <div className ="service-title">
+                <div className ="service-title_container">
                     <div className="service_icon">
                         <FontAwesomeIcon icon={icon}/>
                     </div> 
@@ -35,10 +35,10 @@ function ServiceItem ({icon, iconAlt, title, description}) {
                 {isOpened && (
                     <div 
                         className='description_box'
-                        style={{opacity: `${opacity}`, transition: "opacity 0.5s ease"}}
+                        style={{opacity: `${opacity}`, transition: "opacity 700ms ease-in-out"}}
                     >
                     {description.map(text=>(
-                        <p key={text.id}>{text.text}</p>
+                        <p key={text.id}>&bull; {text.text}</p>
                     ))}
                     </div>  
                 )}                    
