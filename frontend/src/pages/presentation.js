@@ -23,7 +23,7 @@ function Presentation() {
                         </a>       
                     </div>
                     <div className='presentation_img'>
-                        <img src= {profileImage} alt="My profile" className='profile_img'  />
+                        <img src= {profileImage} alt="My profile" />
                     </div>
                 </section>
                 <section id="competences" className="competences">

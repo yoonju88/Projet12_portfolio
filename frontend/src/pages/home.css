@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
 }
-.homeTxt_container {
+.home_container {
     text-align: center;
 }
 h1{
@@ -24,7 +24,7 @@ h1{
     line-height: 1;  
     color : white;
 }
-.homeTxt_container p {
+.home_container p {
     font-size: 35px;
     font-weight: 400;
     color:white;
@@ -33,7 +33,7 @@ h1{
     h1{
         font-size: 100px;   
     }
-    .homeTxt_container p{
+    .home_container p{
         font-size: 25px;
     }
 }
@@ -41,7 +41,7 @@ h1{
     h1{
         font-size: 80px;
     }
-    .homeTxt_container p{
+    .home_container p{
         font-size: 22px;
     }
 }

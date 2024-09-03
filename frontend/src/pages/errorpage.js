@@ -13,12 +13,12 @@ function NotFound (){
                 <section className='error_container'>
                     <div className="error_txt_container">
                         <h1>404</h1>
-                        <p className='errorPage_message'>La page que vous demnadez n'existe pas.</p>
+                        <p className='error_message'>La page que vous demnadez n'existe pas.</p>
                     </div>
                     <div className="error_btn_container">    
                         <Link to="/" className='button btnv2'>                             
                             Retour à l'acceuil 
-                            <img src={Return} alt="return icon"/>
+                            <img src={Return} alt="Return icon"/>
                         </Link>
                     </div>
                 </section>

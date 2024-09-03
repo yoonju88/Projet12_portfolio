@@ -8,11 +8,11 @@
     text-align: center;
 }
 .error_container h1,
-.errorPage_message {
+.error_message {
     color:#f51af2;
     margin-bottom: 20px;
 }
-.errorPage_message {
+.error_message {
     font-size: 28px;
 }
 .error_btn_container{

@@ -113,11 +113,7 @@ border: 2px solid var(--main-color);
     width : 80px;
     height :80px;
 }
-.modal_message {
-    display: flex;
-    flex-direction: column;
-    gap :15px;
-}
+/*
 .remark_msg{
     display: flex;
     align-items: center;
@@ -133,12 +129,13 @@ border: 2px solid var(--main-color);
     line-height: 18px;
     width:100%;
 }
+*/
 @media screen and (max-width:1024px) {
     .contact_container {
         width: calc(100% - 30%);
     }
 }
-@media screen and (min-width: 375px) and (max-width:768px) {
+@media screen and (max-width:768px) {
     .contact_container {
         width: calc(100% - 10%);
         gap: 40px;
@@ -165,8 +162,25 @@ border: 2px solid var(--main-color);
         font-size: 16px;
     }
     .modal_container {
-        width: 350px;
+        width: 450px;
         height:200px;
         min-width: 140px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .modal_container {
+        width: 320px;
+    }
+    .modal_icon {
+        width : 65px;
+        height :65px;
+    }
+    .modal_content {  
+        gap :10px;
+    }
+    .modal_content p{  
+        font-size: 15.5px;
+        width: 100%;
     }
 }

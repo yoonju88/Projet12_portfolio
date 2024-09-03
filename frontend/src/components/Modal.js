@@ -43,5 +43,4 @@ Modal.prototype ={
     message :PropTypes.string,
 }
 
-
 export default Modal

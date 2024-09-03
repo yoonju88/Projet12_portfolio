@@ -27,7 +27,7 @@ function ServiceItem ({icon, iconAlt, title, description}) {
                 style={{maxHeight: `${itemHeight}px`, transition: "max-height 300ms ease-in-out"}}   
             >
                 <div className ="service-title_container">
-                    <div className="service_icon">
+                    <div>
                         <FontAwesomeIcon icon={icon}/>
                     </div> 
                     <h4 >{title}</h4>

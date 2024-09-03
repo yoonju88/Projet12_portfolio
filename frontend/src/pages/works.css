@@ -4,6 +4,11 @@
     flex-direction: column;
     align-items: center;
 }
+.works_links{
+    margin-top: 30px;
+    gap: 70px;
+    padding:0 20px;
+}
 .works_title h2 {
     margin-bottom: 40px;
 }
@@ -15,15 +20,13 @@
     display: flex;
     gap: 50px;
 }
-.works_links{
-    margin-top: 30px;
-    gap: 70px;
-    padding:0 20px;
-}
 .linkCard_container{
     position: relative;
     display: flex;
     justify-content: center;
+}
+.linkCard_img{
+    overflow: hidden;
 }
 .linkCard_name{
     position: absolute;
@@ -32,9 +35,6 @@
     color : var(--text-color);
     font-weight: 400;
     text-align: center;
-}
-.linkCard_img{
-    overflow: hidden;
 }
 .linkCard_container img{
     transform: scale(1);
@@ -96,9 +96,6 @@
     flex-direction: column;
     text-align: center;
 }
-.project_img {
-    overflow: hidden;
-}
 .project_icons{
     display: flex;
     position: absolute;
@@ -127,6 +124,10 @@ h3 {
     .linkCard_name {
         font-size: 15px;
     }
+    .realisations{
+        background-color: rgba(0, 102, 255, 0.1);
+        padding: 50px 0 20px 0;
+    }
     .row, .row_reverse {
         flex-direction: column;
         gap: 20px;
@@ -136,10 +137,6 @@ h3 {
     }
     .project_icons{
         right: 45px;
-    }
-    .realisations{
-        background-color: rgba(0, 102, 255, 0.1);
-        padding: 50px 0 20px 0;
     }
 }
 @media screen and (max-width:768px) {

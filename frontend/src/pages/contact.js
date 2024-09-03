@@ -14,7 +14,7 @@ function Contact() {
             <Menu />
             <main className='contact_page'>
                 <div className='contact_container'>
-                    <div className='contact_title'>
+                    <div>
                         <h2>CONTACT</h2>
                         <p>N'hésitez pas à me contacter si vous souhaitez en savoir plus sur moi ou si vous êtes intéressé par une collaboration.</p>
                     </div>

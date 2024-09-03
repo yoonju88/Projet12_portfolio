@@ -8,7 +8,7 @@ function Home() {
         <div className='home_page'>
             <Menu />
             <main>
-                <div className='homeTxt_container'>
+                <div className='home_container'>
                     <h1>YOONJU <br /> TERRENOIRE</h1>
                     <p>DÉVELOPPEUSE WEB, FRONT END</p>
                 </div>
