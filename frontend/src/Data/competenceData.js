@@ -91,7 +91,7 @@ export const competenceData = [
     },
     {
         id: 'a11',
-        name : 'Visual Studio Code',
+        name : 'VSC',
         category :'Outils',
         image :  VSC,
         alt : 'Icône Visual Studio Code'

@@ -12,7 +12,7 @@ function Menu() {
             <nav>
                 <ul>
                     <li><NavLink to="/" activeclassname='active' className="underLine">HOME</NavLink></li>                    
-                    <li><NavLink to="/about_me" activeclassname='active' className="underLine">ABOUT ME</NavLink></li>
+                    <li><NavLink to="/about_me" activeclassname='active' className="underLine">PRÉSENTATION</NavLink></li>
                     <li><NavLink to="/works" activeclassname='active' className="underLine">PORTFOLIO</NavLink></li>
                     <li><NavLink to="/contact" activeclassname='active' className="underLine">CONTACT</NavLink ></li>
                 </ul>

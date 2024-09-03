@@ -82,12 +82,5 @@ Field.propTypes = {
     required: PropTypes.bool,
     label: PropTypes.string,
 }
-Field.defaultProps = {
-    label: "",
-    placeholder: "",
-    type: FIELD_TYPES.INPUT_TEXT,
-    name: "field-name",
-    value: "",
-}
 
 export default Field

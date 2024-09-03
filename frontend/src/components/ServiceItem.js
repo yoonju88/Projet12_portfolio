@@ -23,10 +23,9 @@ function ServiceItem ({icon, iconAlt, title, description}) {
         <li className="serviceItem" >
             <div 
                 onClick={handleCollapse} 
-                className="serviceItem_container"
+                className="serviceItem_container serviceItem-position"
                 style={{height: `${itemHeight}px`, transition: "height 0.3s ease-in-out"}}   
             >
-                
                 <div className ="service-title">
                     <div className="service_icon">
                         <FontAwesomeIcon icon={icon}/>
