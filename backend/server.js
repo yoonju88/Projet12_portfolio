@@ -2,14 +2,17 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const jwt = require('jsonwebtoken');
 const sendEmail = require('./sendEmail');
+const cors = require('cors')
+require('dotenv').config();
 
 const app = express();
-const cors = require('cors')
+const PORT = process.env.PORT || 3000;
+
 app.use(bodyParser.json());
 
 //parameter of cors
 app.use(cors({
-    origin: '*', 
+    origin: '*',  // 모든 출처 허용
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type']
 }));
@@ -36,7 +39,7 @@ app.get('/health', (req, res) => {
     res.status(200).send('OK');
 });
 
-const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
