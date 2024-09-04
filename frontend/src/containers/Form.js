@@ -41,21 +41,28 @@ function Form ({setIsModalOpen}) {
             return 
         }
         try {
-            const response = await fetch('https://projet12-portfolio-olyk.onrender.com/contact/submit', {
+            const response = await fetch('https://projet12-portfolio-olyk.onrender.com/submit', {
                 method: 'POST',
                 headers : {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData)
             })
-            const result = await response.json();
-            console.log("response", response.status)
-            if(result.state === "success") {
-                setIsModalOpen(true)
-                setFormData ({nom: '', email:'', message :''})
+            const contentType = response.headers.get('Content-Type');
+            if (contentType && contentType.includes('application/json')) {
+                const result = await response.json();
+                if(result.state === "success") {
+                    setIsModalOpen(true)
+                    setFormData ({nom: '', email:'', message :''})
+                } else {
+                    setErrorMsg(result.message)
+                    setLoading(false)
+                }
             } else {
-                setErrorMsg(result.message)
-                setLoading(false)
+                // JSON이 아닌 경우
+                const text = await response.text();
+                console.error('Unexpected response format:', text);
+                setErrorMsg("L'envoie du méssage a échoué. Réponse inattendue du serveur.");
             }
         } catch (error) {
             console.error('Error', error)

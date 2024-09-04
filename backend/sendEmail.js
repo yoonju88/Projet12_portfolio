@@ -1,31 +1,26 @@
 const nodemailer = require('nodemailer');
-const jwt = require('jsonwebtoken');
-
 // Configuration du transporteur de mails (ici avec Gmail, mais cela dépend de votre fournisseur)
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'votre.email@gmail.com', // Votre adresse email
-        pass: 'votre_mot_de_passe' // Votre mot de passe email
+        user: process.env.EMAIL_USER, // Votre adresse email
+        pass: process.env.EMAIL_PASS // Votre mot de passe email
     }
 });
 // Fonction pour envoyer un email
-async function sendEmail({ nom, email, message }) {
+const sendEmail = async ({ nom, email, message }) => {
+    const mailOptions = {
+        from: process.env.EMAIL_USER, 
+        to: process.env.EMAIL_RECEIVER, 
+        subject: `Contact Form Submission`, 
+        text: `Nom: ${nom}\nEmail: ${email}\nMessage: ${message}`, 
+    };
     try {
-        // Configuration de l'email
-        const mailOptions = {
-            from: email, // Adresse de l'expéditeur
-            to: 'votre.email@gmail.com', // Adresse du destinataire
-            subject: `Nouveau message de ${nom}`, // Sujet de l'email
-            text: message, // Contenu du message
-        };
-        // Envoi de l'email
-        const info = await transporter.sendMail(mailOptions);
-        console.log('Email envoyé: ' + info.response);
-        return { success: true };
+        await transporter.sendMail(mailOptions)
+        return {success : true };
     } catch (error) {
-        console.error('Erreur lors de l\'envoi de l\'email:', error);
-        return { success: false, error: error.message };
-    }
+        console.error('Error sending email:', error)
+        return {success: false, error: error.message }
+    }     
 }
 module.exports = sendEmail;

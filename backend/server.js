@@ -11,15 +11,12 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 //parameter of cors
-app.use(cors({
-    origin: '*',  // 모든 출처 허용
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type']
-}));
+app.use(cors());
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your_default_secret_key';
 
-app.post('/contact/submit', async(req, res) => {
+app.post('/submit', async(req, res) => {
+    console.log('Received request at /contact');
     const { nom, email, message } = req.body;
     const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1h' });
     try {        
