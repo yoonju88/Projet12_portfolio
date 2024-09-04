@@ -31,23 +31,44 @@ function Form ({setIsModalOpen}) {
         }
         return true
     }
-
-    const handleSubmit =(e)=> {
+    const handleSubmit = async(e)=> {
         e.preventDefault()
+        setLoading(true)
         if (!isFormValid()) {
+            setErrorMsg('veuillez remplir tous les champes de formulaires')
             return 
         }
-        setLoading(true)
-
-        setTimeout (() =>{
-            setIsModalOpen(true)
-            setFormData ({
-                nom: '',
-                email:'',
-                message :''
+        try {
+            const response = await fetch ('https://projet12-portfolio.onrender.com/submit-form', {
+                method: 'POST',
+                headers : {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
             })
-            setLoading(false)
-        }, 500)
+            const result = await response.json();
+            console.log(result)
+            if(result.state === "success") {
+                setIsModalOpen(true)
+                setFormData ({
+                    nom: '',
+                    email:'',
+                    message :''
+                })
+                setLoading(false)
+            } else {
+                setErrorMsg(result.message)
+                setFormData ({
+                    nom: '',
+                    email:'',
+                    message :''
+                })
+            }
+        } catch (error) {
+            console.error('Error', error)
+            setErrorMsg("Le message n'a pas été envoyé")
+        }
+        setLoading(true)
     }
 
     return (
@@ -82,7 +103,7 @@ function Form ({setIsModalOpen}) {
             maxLength= "300"
         />
         {errorMsg && (<p>{errorMsg}</p>)}
-        <button type='submit' className='button'>
+        <button type='submit' className='button' disabled={loading}>
             {loading ? "En cours..." : "Envoyer" }
         </button>
     </form>
