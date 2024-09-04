@@ -35,12 +35,12 @@ function Form ({setIsModalOpen}) {
         e.preventDefault()
         setLoading(true)
         if (!isFormValid()) {
-            setErrorMsg('veuillez remplir tous les champes de formulaires')
+            setErrorMsg('Veuillez remplir tous les champes de formulaire')
+            setLoading(false);
             return 
         }
         try {
-            const response = await fetch ('https://projet12-portfolio.onrender.com/contact', {
-                mode: "no-cors",
+            const response = await fetch ('https://projet12-portfolio-olyk.onrender.com//contact/submit', {
                 method: 'POST',
                 headers : {
                     'Content-Type': 'application/json',
@@ -48,28 +48,18 @@ function Form ({setIsModalOpen}) {
                 body: JSON.stringify(formData)
             })
             const result = await response.json();
-            console.log(result)
             if(result.state === "success") {
                 setIsModalOpen(true)
-                setFormData ({
-                    nom: '',
-                    email:'',
-                    message :''
-                })
-                setLoading(false)
+                setFormData ({nom: '', email:'', message :''})
             } else {
                 setErrorMsg(result.message)
-                setFormData ({
-                    nom: '',
-                    email:'',
-                    message :''
-                })
+                setLoading(false)
             }
         } catch (error) {
             console.error('Error', error)
-            setErrorMsg("Le message n'a pas été envoyé")
+            setErrorMsg("L'envoie du méssage a echoué")
+            throw error
         }
-        setLoading(true)
     }
 
     return (
@@ -105,7 +95,8 @@ function Form ({setIsModalOpen}) {
         />
         {errorMsg && (<p>{errorMsg}</p>)}
         <button type='submit' className='button' disabled={loading}>
-            {loading ? "En cours..." : "Envoyer" }
+            Envoyer
+            {/* {loading ? "En cours..." : "Envoyer" } */}
         </button>
     </form>
     )
