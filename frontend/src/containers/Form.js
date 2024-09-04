@@ -34,13 +34,14 @@ function Form ({setIsModalOpen}) {
     const handleSubmit = async(e)=> {
         e.preventDefault()
         setLoading(true)
+
         if (!isFormValid()) {
             setErrorMsg('Veuillez remplir tous les champes de formulaire')
             setLoading(false);
             return 
         }
         try {
-            const response = await fetch ('https://projet12-portfolio-olyk.onrender.com//contact/submit', {
+            const response = await fetch('https://projet12-portfolio-olyk.onrender.com//contact/submit', {
                 method: 'POST',
                 headers : {
                     'Content-Type': 'application/json',
@@ -48,6 +49,7 @@ function Form ({setIsModalOpen}) {
                 body: JSON.stringify(formData)
             })
             const result = await response.json();
+            console.log("response", response.status)
             if(result.state === "success") {
                 setIsModalOpen(true)
                 setFormData ({nom: '', email:'', message :''})

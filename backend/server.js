@@ -1,8 +1,10 @@
 const express = require('express');
+const bodyParser = require("body-parser");
+const jwt = require('jsonwebtoken');
+const sendEmail = require('./sendEmail');
+
 const app = express();
-const mongoose = require ('mongoose')
 const cors = require('cors')
-const bodyParser = require("body-parser"); 
 app.use(bodyParser.json());
 
 //parameter of cors
@@ -12,33 +14,23 @@ app.use(cors({
     allowedHeaders: ['Content-Type']
 }));
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio'
-mongoose.connect (MONGODB_URI)
-.then(() => console.log('Connection to MongoDB'))
-.catch( err => console.error ('Error connecting to MongoDB', err))
-
-const FormSchema = new mongoose.Schema ({
-    nom: String,
-    email: String,
-    message: String
-})
-
-const FormData = mongoose.model('FormData', FormSchema)
+const JWT_SECRET = process.env.JWT_SECRET || 'your_default_secret_key';
 
 app.post('/contact/submit', async(req, res) => {
-    const {nom, email, message} = req.body
-    if (!nom || !email || !message) {
-        return res.status(400).json({ status: 'error', message: 'please fill out all the field.' });
+    const { nom, email, message } = req.body;
+    const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1h' });
+    try {        
+        const result = await sendEmail({ nom, email, message });
+        if (result.success) {
+            res.json({ state: 'success', message: 'Email envoyé avec succès' });
+        } else {
+            res.json({ state: 'error', message: result.error });
+        }
+    } catch (error) {
+        console.error('Erreur:', error);
+        res.status(500).json({ state: 'error', message: 'Erreur lors de l\'envoi du message' });
     }
-    try {
-        const formData = new FormData({nom, email, message})
-        await formData.save()
-        res.json ({status: 'success', message:'form data saved successfully.'})
-    } catch (err) {
-        console.error('Error saving data:', err);
-        res.status(500).json({ status: 'error', message: 'form data saved failed' });
-    }   
-})
+});
 
 app.get('/health', (req, res) => {
     res.status(200).send('OK');
