@@ -6,16 +6,13 @@ const cors = require('cors')
 app.use(bodyParser.json());//Midllewaore
 //parameter of cors
 app.use(cors({
-    origin: '*', // 모든 도메인에서의 요청을 허용
+    origin: '*', 
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type']
 }));
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio'
-mongoose.connect (MONGODB_URI, {
-    useNewUrlParser : true,
-    useUnifiedTopology: true
-})
+mongoose.connect (MONGODB_URI)
 .then(() => console.log('Connection to MongoDB'))
 .catch( err => console.error ('Error connecting to MongoDB', err))
 
@@ -27,7 +24,7 @@ const FormSchema = new mongoose.Schema ({
 
 const FormData = mongoose.model('FormData', FormSchema)
 
-app.post('/submit-form', async(req, res) => {
+app.post('/contact', async(req, res) => {
     const {nom, email, message} = req.body
     console.log(`Received message from ${nom} (${email}) : ${message}`)
     if (!nom || !email || !message) {
@@ -42,6 +39,13 @@ app.post('/submit-form', async(req, res) => {
         res.status(500).json({ status: 'error', message: 'form data saved failed' });
     }   
 })
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

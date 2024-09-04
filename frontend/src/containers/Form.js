@@ -39,7 +39,8 @@ function Form ({setIsModalOpen}) {
             return 
         }
         try {
-            const response = await fetch ('https://projet12-portfolio.onrender.com/submit-form', {
+            const response = await fetch ('https://projet12-portfolio.onrender.com/contact', {
+                mode: "no-cors",
                 method: 'POST',
                 headers : {
                     'Content-Type': 'application/json',
