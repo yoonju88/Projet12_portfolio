@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import closeIcon from '../images/icons/close.png'
-import React/*, {useEffect}*/ from 'react'
-//import attention from '../images/icons/attention.png'
+import React, {useEffect} from 'react'
+
 
 function Modal ({message, image, alt, onClick, remarque}) {
 
@@ -10,12 +10,12 @@ function Modal ({message, image, alt, onClick, remarque}) {
             onClick()
         }
     }
-    /*useEffect(() => {
+    useEffect(() => {
         const timer = setTimeout (() => {
         onClick();
        }, 3000)
         return () => clearTimeout(timer)
-    }, [onClick])*/
+    }, [onClick])
 
     return (
         <div className="modal_overlay" onClick={handleOverlayClick}>
@@ -28,10 +28,6 @@ function Modal ({message, image, alt, onClick, remarque}) {
                         <img src={image} alt={alt}/>
                     </span>
                     <p>{message}</p>
-                    {/* <div className="remark_msg">
-                        <img src ={attention} alt="remarque icon"/>
-                        <p>{remarque}</p>
-                    </div> */}
                 </div>
             </div>
         </div>
