@@ -13,7 +13,6 @@ function Form ({setIsModalOpen}) {
     const handleChange =(e) => {
         const { name, value }= e.target
         setFormData({...formData, [name]: value })
-        setErrorMsg('')
     }
     const isEmailValid =(email) => {
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -21,23 +20,18 @@ function Form ({setIsModalOpen}) {
     }
     const isFormValid = () => {
         const {nom, email, message} = formData
-        if (nom.trim() === ''|| email.trim()===''|| message.trim()==='') {
-            setErrorMsg("Veuillez saisir correctement les champs de formulaire")
-            return false;
-        }
-        if (!isEmailValid(email)){
-            setErrorMsg("Veuillez saisir correctement votre E-mail")
-            return false
-        }
-        return true
+        return (
+            nom.trim() !== '' &&
+            email.trim() !== '' &&
+            isEmailValid(email) &&
+            message.trim() !== ''
+          );
     }
     const handleSubmit = async(e)=> {
         e.preventDefault()
         setLoading(true)
-
         if (!isFormValid()) {
             setErrorMsg('Veuillez remplir tous les champes de formulaire')
-            setLoading(false);
             return 
         }
         try {
@@ -59,15 +53,12 @@ function Form ({setIsModalOpen}) {
                     setLoading(false)
                 }
             } else {
-                // JSON이 아닌 경우
-                const text = await response.text();
                 console.error('Unexpected response format:', text);
                 setErrorMsg("L'envoie du méssage a échoué. Réponse inattendue du serveur.");
             }
         } catch (error) {
             console.error('Error', error)
             setErrorMsg("L'envoie du méssage a echoué")
-            throw error
         }
     }
 
