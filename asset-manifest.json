@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Projet12_portfolio/static/css/main.bdc5164a.css",
-    "main.js": "/Projet12_portfolio/static/js/main.67013d29.js",
+    "main.css": "/Projet12_portfolio/static/css/main.96fb835b.css",
+    "main.js": "/Projet12_portfolio/static/js/main.b3f0e23d.js",
     "static/media/cv-yoonju.jpg": "/Projet12_portfolio/static/media/cv-yoonju.3e3b6fcf77ddffdd4a29.jpg",
     "static/media/kasa_v2.webp": "/Projet12_portfolio/static/media/kasa_v2.edd0c2cc85d98d109dd8.webp",
     "static/media/yoonju.webp": "/Projet12_portfolio/static/media/yoonju.75a35a4e6f51d9773862.webp",
@@ -14,11 +14,11 @@
     "static/media/724events_v1.webp": "/Projet12_portfolio/static/media/724events_v1.64eff35b78783dbcd776.webp",
     "static/media/argentbank_v1.webp": "/Projet12_portfolio/static/media/argentbank_v1.1f87e619dc7ec5455671.webp",
     "index.html": "/Projet12_portfolio/index.html",
-    "main.bdc5164a.css.map": "/Projet12_portfolio/static/css/main.bdc5164a.css.map",
-    "main.67013d29.js.map": "/Projet12_portfolio/static/js/main.67013d29.js.map"
+    "main.96fb835b.css.map": "/Projet12_portfolio/static/css/main.96fb835b.css.map",
+    "main.b3f0e23d.js.map": "/Projet12_portfolio/static/js/main.b3f0e23d.js.map"
   },
   "entrypoints": [
-    "static/css/main.bdc5164a.css",
-    "static/js/main.67013d29.js"
+    "static/css/main.96fb835b.css",
+    "static/js/main.b3f0e23d.js"
   ]
 }
