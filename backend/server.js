@@ -15,7 +15,7 @@ app.use(cors({
 const corsOption = {
     origin: (origin, callback) => {
         const whiteList = [
-            "https://yoonju88.github.io",
+            "https://yoonju88.github.io/Projet12_portfolio/",
             "https://localhost:3000"
         ]
         if (whiteList.indexOf(origin) !== -1 || !origin) {
