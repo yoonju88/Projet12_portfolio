@@ -32,6 +32,7 @@ function Form ({setIsModalOpen}) {
         setLoading(true)
         if (!isFormValid()) {
             setErrorMsg('Veuillez remplir tous les champes de formulaire')
+            setLoading(false)
             return 
         }
         try {
@@ -53,12 +54,14 @@ function Form ({setIsModalOpen}) {
                     setLoading(false)
                 }
             } else {
-                console.error('Unexpected response format:', text);
+                console.error('Unexpected response format:', contentType);
                 setErrorMsg("L'envoie du méssage a échoué. Réponse inattendue du serveur.");
             }
         } catch (error) {
             console.error('Error', error)
             setErrorMsg("L'envoie du méssage a echoué")
+        } finally{
+            setLoading(false)
         }
     }
 
