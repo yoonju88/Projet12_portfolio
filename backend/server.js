@@ -15,9 +15,10 @@ app.use(cors());
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your_default_secret_key';
 
-app.post('/submit', async(req, res) => {
-    console.log('Received request at /contact');
+app.post('/contact/submit', async(req, res) => {
+    console.log('Received request at /contact/submit');
     const { nom, email, message } = req.body;
+    console.log('Received request body:', req.body);
     const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1h' });
     try {        
         const result = await sendEmail({ nom, email, message });

@@ -41,7 +41,7 @@ function Form ({setIsModalOpen}) {
             return 
         }
         try {
-            const response = await fetch('https://projet12-portfolio-olyk.onrender.com/submit', {
+            const response = await fetch('https://projet12-portfolio-olyk.onrender.com/contact/submit', {
                 method: 'POST',
                 headers : {
                     'Content-Type': 'application/json',
@@ -102,11 +102,11 @@ function Form ({setIsModalOpen}) {
             onChange={handleChange}
             maxLength= "300"
         />
-        {errorMsg && (<p>{errorMsg}</p>)}
         <button type='submit' className='button' disabled={loading}>
             Envoyer
             {/* {loading ? "En cours..." : "Envoyer" } */}
         </button>
+        {errorMsg && (<p style={{ color : "#f51af2", marginTop: "30px", width:"65%", fontSize:"15px"}}>{errorMsg}</p>)}        
     </form>
     )
 }
