@@ -28,7 +28,7 @@
     width:100%;
 }  
 .presentation_img {
-    padding: 6%;
+    padding: 0 6%;
     width:100%;
     display: flex;
     align-content: center;

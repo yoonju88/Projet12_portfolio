@@ -92,8 +92,8 @@ img {
 .works_page, .presentation_page { 
   display: flex;
   flex-direction: column;
-  padding: 80px 0;
-  gap:80px;
+  padding: 100px 0;
+  gap:100px;
   max-width: 1440px;
 }
 @media screen and (max-width:1024px) {
