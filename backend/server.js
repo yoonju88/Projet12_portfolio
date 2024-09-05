@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: ' https://yoonju88.github.io/Projet12_portfolio/' // Remplacez par l'URL de votre frontend si différent
+    origin: 'https://localhost:3000' // Remplacez par l'URL de votre frontend si différent
   }));
 //parameter of cors
 const corsOption = {
