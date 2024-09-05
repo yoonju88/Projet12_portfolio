@@ -11,16 +11,15 @@ const transporter = nodemailer.createTransport({
 const sendEmail = async ({ nom, email, message }) => {
     const mailOptions = {
         from: process.env.EMAIL_USER, 
-        to: process.env.EMAIL_RECEIVER, 
+        to: "yoonju.t@getMaxListeners.com",
         subject: `Contact Form Submission`, 
         text: `Nom: ${nom}\nEmail: ${email}\nMessage: ${message}`, 
-    };
-    try {
-        await transporter.sendMail(mailOptions)
+    };   
+    await transporter.sendMail(mailOptions, (error, info)=>{
+        if (error){
+            return {success : false };
+        }
         return {success : true };
-    } catch (error) {
-        console.error('Error sending email:', error)
-        return {success: false, error: error.message }
-    }     
+    })
 }
 module.exports = sendEmail;

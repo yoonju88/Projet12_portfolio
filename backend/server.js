@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-const jwt = require('jsonwebtoken');
 const sendEmail = require('./sendEmail');
 const cors = require('cors')
 require('dotenv').config();
@@ -11,16 +10,26 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 //parameter of cors
-app.use(cors());
+const corsOption = {
+    origin: (origin, callback) => {
+        const whiteList = [
+            "https://yoonju88.github.io",
+            "https://localhost:3001"
+        ]
+        if (whiteList.indexOf(origin) !== -1 || !origin) {
+            callback(null, true)
+        } else {
+            callback(new Error("non authorisé"))
+        }
+    }
+}
+app.use(cors(corsOption))
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your_default_secret_key';
-
-app.post('/contact/submit', async(req, res) => {
-    console.log('Received request at /contact/submit');
+app.post('/send', async (req, res) => {
+    console.log('Received request at /send');
     const { nom, email, message } = req.body;
     console.log('Received request body:', req.body);
-    const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1h' });
-    try {        
+    try {
         const result = await sendEmail({ nom, email, message });
         if (result.success) {
             res.json({ state: 'success', message: 'Email envoyé avec succès' });
@@ -36,7 +45,6 @@ app.post('/contact/submit', async(req, res) => {
 app.get('/health', (req, res) => {
     res.status(200).send('OK');
 });
-
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
