@@ -1,25 +1,30 @@
 const nodemailer = require('nodemailer');
+require("dotenv").config()
 // Configuration du transporteur de mails (ici avec Gmail, mais cela dépend de votre fournisseur)
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
+    secure: false,
     auth: {
-        user: process.env.EMAIL_USER, // Votre adresse email
-        pass: process.env.EMAIL_PASS // Votre mot de passe email
-    }
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+  },
 });
 // Fonction pour envoyer un email
-const sendEmail = async ({ nom, email, message }) => {
-    const mailOptions = {
-        from: process.env.EMAIL_USER, 
-        to: "yoonju.t@getMaxListeners.com",
-        subject: `Contact Form Submission`, 
-        text: `Nom: ${nom}\nEmail: ${email}\nMessage: ${message}`, 
-    };   
-    await transporter.sendMail(mailOptions, (error, info)=>{
-        if (error){
-            return {success : false };
-        }
-        return {success : true };
+const sendEmail = ({ nom, email, message }) => {
+    return new Promise((resolve, reject)=> {
+        const mailOptions = {
+            from: "hoyoonju2@gmail.com", 
+            to: "yoonju.t@gmail.com",
+            subject: `Contact Form Submission`, 
+            text: `Nom: ${nom}\nEmail: ${email}\nMessage: ${message}`, 
+        };   
+        transporter.sendMail(mailOptions, (error, info)=>{
+            console.log(error, info)
+            if (error){
+                return reject({success : false, info:info }) ;
+            }
+            return resolve({success : true });
+        })
     })
 }
 module.exports = sendEmail;

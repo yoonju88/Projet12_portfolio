@@ -8,13 +8,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-
+app.use(cors({
+    origin: 'http://localhost:3000' // Remplacez par l'URL de votre frontend si différent
+  }));
 //parameter of cors
 const corsOption = {
     origin: (origin, callback) => {
         const whiteList = [
             "https://yoonju88.github.io",
-            "https://localhost:3001"
+            "https://localhost:3000"
         ]
         if (whiteList.indexOf(origin) !== -1 || !origin) {
             callback(null, true)
@@ -23,7 +25,7 @@ const corsOption = {
         }
     }
 }
-app.use(cors(corsOption))
+// app.use(cors(corsOption))
 
 app.post('/send', async (req, res) => {
     console.log('Received request at /send');

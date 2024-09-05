@@ -36,13 +36,14 @@ function Form ({setIsModalOpen}) {
             return 
         }
         try {
-            const response = await fetch('https://projet12-portfolio-olyk.onrender.com/contact/submit', {
+            const response = await fetch('http://localhost:10000/send', {
                 method: 'POST',
                 headers : {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData)
             })
+            console.log("response:", response)
             const contentType = response.headers.get('Content-Type');
             if (contentType && contentType.includes('application/json')) {
                 const result = await response.json();
