@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport({
 const sendEmail = ({ nom, email, message }) => {
     return new Promise((resolve, reject)=> {
         const mailOptions = {
-            from: "hoyoonju2@gmail.com", 
-            to: "yoonju.t@gmail.com",
+            from: email, 
+            to: process.env.EMAIL_USER,
             subject: `Contact Form Submission`, 
             text: `Nom: ${nom}\nEmail: ${email}\nMessage: ${message}`, 
         };   

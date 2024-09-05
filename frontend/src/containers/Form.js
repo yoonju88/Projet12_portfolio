@@ -36,7 +36,7 @@ function Form ({setIsModalOpen}) {
             return 
         }
         try {
-            const response = await fetch('http://localhost:10000/send', {
+            const response = await fetch('https://projet12-portfolio-olyk.onrender.com/send', {
                 method: 'POST',
                 headers : {
                     'Content-Type': 'application/json',
