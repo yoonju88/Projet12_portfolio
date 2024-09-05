@@ -8,14 +8,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(cors({
-    origin: 'https://localhost:3000' // Remplacez par l'URL de votre frontend si différent
-  }));
+// app.use(cors({
+//     origin: 'https://localhost:3000'
+//   }));
 //parameter of cors
 const corsOption = {
     origin: (origin, callback) => {
         const whiteList = [
-            "https://yoonju88.github.io/Projet12_portfolio/",
+            "https://yoonju88.github.io",
             "https://localhost:3000"
         ]
         if (whiteList.indexOf(origin) !== -1 || !origin) {
@@ -25,7 +25,7 @@ const corsOption = {
         }
     }
 }
-// app.use(cors(corsOption))
+app.use(cors(corsOption))
 
 app.post('/send', async (req, res) => {
     console.log('Received request at /send');
