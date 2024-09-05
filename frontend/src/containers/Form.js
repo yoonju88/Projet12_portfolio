@@ -74,7 +74,7 @@ function Form ({setIsModalOpen}) {
     return (
         <form onSubmit={handleSubmit}>
         <Field
-            label='Nom et Prénom'
+            label='Nom'
             fieldType={FIELD_TYPES.INPUT_TEXT}
             type="text"
             id="nom"
