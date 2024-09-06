@@ -97,9 +97,8 @@ function Form ({setIsModalOpen}) {
             onChange={handleChange}
             maxLength= "300"
         />
-        <button type='submit' className='button' disabled={loading}>
-            Envoyer
-            {/* {loading ? "En cours..." : "Envoyer" } */}
+        <button type='submit' className='button' disabled={loading}>        
+            {loading ? "En cours..." : "Envoyer" }
         </button>
         {errorMsg && (<p style={{ color : "#f51af2", marginTop: "30px", width:"65%", fontSize:"15px"}}>{errorMsg}</p>)}        
     </form>
