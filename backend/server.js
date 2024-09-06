@@ -8,10 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-// app.use(cors({
-//     origin: 'https://localhost:3000'
-//   }));
-//parameter of cors
+
 const corsOption = {
     origin: (origin, callback) => {
         const whiteList = [
