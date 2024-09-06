@@ -25,7 +25,7 @@ function CompetenceList() {
                         image={item.image}
                         alt={item.alt}
                         name={item.name}
-                        category={item.category}
+                        filter={filter}
                     />
                 ))}
             </div>

@@ -29,13 +29,17 @@ function Presentation() {
                 <section id="competences" className="competences">
                     <div className="competences_txt">
                         <h2>COMPÉTENCES</h2>
-                        <p className="competence_description">J’ai acquis des compétences en développement front-end, ainsi qu’une maîtrise de Node.js pour la communication avec le serveur. Concernant les logiciel, j’ai de l’experience avec les outils Adobe.</p>
+                        <p className="section_description">
+                        J’ai acquis des compétences en développement front-end et en communication avec les serveurs au cours de ma formation. J’utilise divers outils de développement pour réaliser un travail professionnel et fluide. En utilisant les logiciels Adobe, j'optimise le design et les projets front-end.
+                        </p>
                     </div>
                     <CompetenceList />
                 </section>
                 <section className="services">
                     <h2>MES SERVICES</h2>
-                    <p>Je vous propose des services de développement web adaptés à vos besoins.</p>
+                    <p className="section_description">
+                        Je vous propose des services de développement web sur mesure et adaptés précisément à vos besoins spécifiques pour garantir des solutions efficaces.
+                    </p>
                     <ul>
                     {serviceData.map(item => (
                          <ServiceItem

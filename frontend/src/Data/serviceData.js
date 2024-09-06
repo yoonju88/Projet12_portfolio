@@ -17,7 +17,7 @@ export const serviceData = [
         alt :" optimisation icon",
         title: "Optimisation",
         description : [
-            { id :"f3", text : 'Reduction des temps de chargement.'},
+            { id :"f3", text : 'Réduction des temps de chargement.'},
             { id :"f4", text : "Amélioration l’UX et optimisation SEO."},
         ]
     },
@@ -37,8 +37,8 @@ export const serviceData = [
         alt:"Responsive icon",
         title: "Responsive",
         description : [
-            {id :"f7", text : "Interfaces adaptables à toute les taille d'écran."},
-            {id :"f8", text : 'Compatibilité et une fluidité d’utilisation optimal.'},
+            {id :"f7", text : "Interfaces adaptables à toute les tailles d'écran."},
+            {id :"f8", text : 'Compatibilité et fluidité garantissant une utilisation optimale.'},
         ]
     }
 ]   
