@@ -14,7 +14,7 @@ function Works() {
                 <section className="works_links">
                 <div className='works_title' >    
                     <h2>RÉALISATIONS</h2>
-                    <p>Pendant la période de formation, j’ai participé à divers projets, résolu de nombreux problèmes et appris à écrire un code efficace axé sur l’utilisateur. Découvrez mes projets réalisés.</p>
+                    <p>J’ai participé à divers projets, résolu de nombreux problèmes et appris à écrire un code efficace axé sur l’utilisateur. Découvrez mes projets réalisés.</p>
                 </div>
                 <div className='linkCards'>
                     {worksData.map(card => (

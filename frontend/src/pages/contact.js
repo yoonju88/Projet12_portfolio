@@ -16,7 +16,7 @@ function Contact() {
                 <div className='contact_container'>
                     <div>
                         <h2>CONTACT</h2>
-                        <p>N'hésitez pas à me contacter si vous souhaitez en savoir plus sur moi ou si vous êtes intéressé par une collaboration.</p>
+                        <p>N'hésitez pas à me contacter si vous souhaitez en savoir plus et si vous êtes intéressé par une collaboration.</p>
                     </div>
                     <Form 
                         setIsModalOpen={setIsModalOpen}
