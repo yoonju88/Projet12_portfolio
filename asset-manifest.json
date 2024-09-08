@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Projet12_portfolio/static/css/main.c0cc9f62.css",
-    "main.js": "/Projet12_portfolio/static/js/main.6c7d324a.js",
+    "main.js": "/Projet12_portfolio/static/js/main.0a261fe6.js",
     "static/media/cv-yoonju.jpg": "/Projet12_portfolio/static/media/cv-yoonju.c1329e777d5bf90f813f.jpg",
     "static/media/kasa_v2.webp": "/Projet12_portfolio/static/media/kasa_v2.edd0c2cc85d98d109dd8.webp",
     "static/media/yoonju.webp": "/Projet12_portfolio/static/media/yoonju.75a35a4e6f51d9773862.webp",
@@ -15,10 +15,10 @@
     "static/media/argentbank_v1.webp": "/Projet12_portfolio/static/media/argentbank_v1.1f87e619dc7ec5455671.webp",
     "index.html": "/Projet12_portfolio/index.html",
     "main.c0cc9f62.css.map": "/Projet12_portfolio/static/css/main.c0cc9f62.css.map",
-    "main.6c7d324a.js.map": "/Projet12_portfolio/static/js/main.6c7d324a.js.map"
+    "main.0a261fe6.js.map": "/Projet12_portfolio/static/js/main.0a261fe6.js.map"
   },
   "entrypoints": [
     "static/css/main.c0cc9f62.css",
-    "static/js/main.6c7d324a.js"
+    "static/js/main.0a261fe6.js"
   ]
 }
