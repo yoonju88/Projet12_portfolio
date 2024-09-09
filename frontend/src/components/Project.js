@@ -5,9 +5,10 @@ function Project({ title, image, alt, description, icons, href, className, idNam
     return (
         <article className={className} id={idName}>
             <div className="project_img_container">
-                <div className='project_img'>
+                <a href={href} className='project_img'>
                     <img src={image} alt={alt}/>
-                </div>
+                    <span className="overlay"></span>
+                </a>
                 <div className='project_icons'>
                     {icons.map((icon)=> (
                         <img key={icon.alt} src={icon.src} alt={icon.alt}/>

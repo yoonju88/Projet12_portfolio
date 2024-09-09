@@ -11,7 +11,7 @@ function LinkCard ({image, alt, title, linkTo}){
         <article className="linkCard_container">   
             <div className="linkCard_img">            
                 <img src={image} alt={alt}/>
-                <span className="linkCard_overlay"></span>
+                <span className="overlay"></span>
             </div>
             <p className="linkCard_name">{title}</p> 
         </article>

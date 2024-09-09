@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import './menu.css'
 
-
 function Menu() {
     const location = useLocation()
     const currentPage = location.pathname
