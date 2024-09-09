@@ -113,23 +113,6 @@ border: 2px solid var(--main-color);
     width : 80px;
     height :80px;
 }
-/*
-.remark_msg{
-    display: flex;
-    align-items: center;
-    padding : 0 40px;
-}
-.remark_msg img{
-    width: 17px;
-    height: 17px;
-}
-.remark_msg p{
-    color : #f51af2;
-    font-size: 17px;
-    line-height: 18px;
-    width:100%;
-}
-*/
 @media screen and (max-width:1024px) {
     .contact_container {
         width: calc(100% - 30%);
@@ -167,7 +150,6 @@ border: 2px solid var(--main-color);
         min-width: 140px;
     }
 }
-
 @media screen and (max-width: 450px) {
     .modal_container {
         width: 320px;

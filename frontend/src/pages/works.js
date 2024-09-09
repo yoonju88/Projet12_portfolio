@@ -13,7 +13,7 @@ function Works() {
             <main className='works_page'>
                 <section className="works_links">
                 <div className='works_title' >    
-                    <h2>RÉALISATIONS</h2>
+                    <h1>RÉALISATIONS</h1>
                     <p>J’ai participé à divers projets, résolu de nombreux problèmes et appris à écrire un code efficace axé sur l’utilisateur. Découvrez mes projets réalisés.</p>
                 </div>
                 <div className='linkCards'>

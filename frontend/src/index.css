@@ -35,7 +35,10 @@ ul{
 li {
   list-style-type: none;
 }
-h2 {
+h2,
+.works_title h1,
+.contact_container h1,
+.presentation_container h1{
   color:var(--main-color);
   font-weight: 600;
   font-size: 70px;
@@ -97,7 +100,13 @@ img {
   max-width: 1440px;
 }
 @media screen and (max-width:1024px) {
-  h2{
+  .works_page { 
+    padding: 100px 0 0 0;
+  }
+  h2,
+  .works_title h1,
+  .contact_container h1,
+  .presentation_container h1 {
     font-size: 50px;
   }
   p, .button {
@@ -109,10 +118,18 @@ img {
 }
 @media screen and (max-width:768px) {
   .works_page, .presentation_page { 
-    padding: 60px 0;
     gap:50px;
   }
-  h2 {
+  .presentation_page {
+    padding: 60px 0;
+  }
+  .works_page {
+    padding: 60px 0 0 0;
+  }
+  h2,
+  .works_title h1,
+  .contact_container h1,
+  .presentation_container h1 {
     font-size: 35px;
   }
   p, .button{

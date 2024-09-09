@@ -1,4 +1,5 @@
 import { faCode,faBugSlash,faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+
 import  { faFaceSmile} from '@fortawesome/free-regular-svg-icons'
 export const serviceData = [
     {

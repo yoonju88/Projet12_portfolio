@@ -1,5 +1,6 @@
 import "./presentation.css"
 import profileImage from '../images/pages/yoonju.webp'
+import profileImage_mobile from '../images/pages/yoonju_mobile.webp'
 import CompetenceList from '../containers/competanceList'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
@@ -15,7 +16,7 @@ function Presentation() {
             <main className="presentation_page">
                 <section id="presentation" className='presentation'>
                     <div className='presentation_container'>
-                        <h2>JE SUIS...</h2>
+                        <h1>JE SUIS...</h1>
                         <p>Avec plusieurs années d'expérience dans le design graphique, mon intérêt dans ce domaine m'a conduit à étudier l'intégration web en utilisant des programmations créatives et innovantes. Aujourd'hui, je vous présente mes réalisations en tant que développeuse web.</p>
                         <a href={YoonjuCV} download className='button btnv2'>
                             Télécharger mon CV
@@ -23,7 +24,12 @@ function Presentation() {
                         </a>       
                     </div>
                     <div className='presentation_img'>
-                        <img src= {profileImage} alt="My profile" />
+                        <img 
+                            src= {profileImage} 
+                            alt="My profile" 
+                            srcSet={`${profileImage_mobile} 700w, ${profileImage} 1200w`} 
+                            sizes="(max-width: 768px) 768px, 1200px" 
+                        />
                     </div>
                 </section>
                 <section id="competences" className="competences">
