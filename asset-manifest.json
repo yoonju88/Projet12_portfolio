@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/Projet12_portfolio/static/css/main.8bf7973c.css",
-    "main.js": "/Projet12_portfolio/static/js/main.f897ba73.js",
+    "main.css": "/Projet12_portfolio/static/css/main.f189d8f7.css",
+    "main.js": "/Projet12_portfolio/static/js/main.5faabfc3.js",
     "static/media/cv-yoonju.jpg": "/Projet12_portfolio/static/media/cv-yoonju.c1329e777d5bf90f813f.jpg",
     "static/media/kasa_v2.webp": "/Projet12_portfolio/static/media/kasa_v2.edd0c2cc85d98d109dd8.webp",
     "static/media/yoonju.webp": "/Projet12_portfolio/static/media/yoonju.75a35a4e6f51d9773862.webp",
     "static/media/argentbank-v2.webp": "/Projet12_portfolio/static/media/argentbank-v2.068307c01dc0052d4243.webp",
     "static/media/sophie-v2.webp": "/Projet12_portfolio/static/media/sophie-v2.4a5300e92f97c4d58cb0.webp",
+    "static/media/yoonju_mobile.webp": "/Projet12_portfolio/static/media/yoonju_mobile.237d5024331ea6f6ad66.webp",
     "static/media/724events-v2.webp": "/Projet12_portfolio/static/media/724events-v2.e3c84f2ac26644ed78ae.webp",
     "static/media/new_bg.webp": "/Projet12_portfolio/static/media/new_bg.626ccbf8579a79ea6acb.webp",
     "static/media/sophie_v1.webp": "/Projet12_portfolio/static/media/sophie_v1.369540c7ccc9897df9ed.webp",
@@ -14,11 +15,11 @@
     "static/media/724events_v1.webp": "/Projet12_portfolio/static/media/724events_v1.64eff35b78783dbcd776.webp",
     "static/media/argentbank_v1.webp": "/Projet12_portfolio/static/media/argentbank_v1.1f87e619dc7ec5455671.webp",
     "index.html": "/Projet12_portfolio/index.html",
-    "main.8bf7973c.css.map": "/Projet12_portfolio/static/css/main.8bf7973c.css.map",
-    "main.f897ba73.js.map": "/Projet12_portfolio/static/js/main.f897ba73.js.map"
+    "main.f189d8f7.css.map": "/Projet12_portfolio/static/css/main.f189d8f7.css.map",
+    "main.5faabfc3.js.map": "/Projet12_portfolio/static/js/main.5faabfc3.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bf7973c.css",
-    "static/js/main.f897ba73.js"
+    "static/css/main.f189d8f7.css",
+    "static/js/main.5faabfc3.js"
   ]
 }
