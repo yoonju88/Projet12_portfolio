@@ -10,7 +10,7 @@ function ServiceItem ({icon, iconAlt, title, description}) {
     }
     useEffect(() => {
         if (isOpened) {
-            setItemHeight ('1000');
+            setItemHeight ('max-content');
             setOpacity('1')
         } else if (!isOpened) {
             setItemHeight('0')
@@ -24,7 +24,7 @@ function ServiceItem ({icon, iconAlt, title, description}) {
             <div 
                 onClick={handleCollapse} 
                 className="serviceItem_container"
-                style={{maxHeight: `${itemHeight}px`, transition: "max-height 300ms ease-in-out"}}   
+                style={{maxHeight: `${itemHeight}`, transition: "max-height 300ms ease-in-out"}}   
             >
                 <div className ="service-title_container">
                     <div>

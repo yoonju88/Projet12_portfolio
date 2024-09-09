@@ -1,17 +1,17 @@
 import React from 'react'
 import gitHub from '../images/icons/gitHub.png'
-function Project({ title, image, alt, description, icons, href, className, idName }) {
 
+function Project({ title, image, alt, description, icons, href, className, idName }) {
     return (
         <article className={className} id={idName}>
             <div className="project_img_container">
                 <a href={href} className='project_img'>
-                    <img src={image} alt={alt}/>
+                    <img src={image} alt={alt} loading='lazy'/>
                     <span className="overlay"></span>
                 </a>
                 <div className='project_icons'>
                     {icons.map((icon)=> (
-                        <img key={icon.alt} src={icon.src} alt={icon.alt}/>
+                        <img key={icon.alt} src={icon.src} alt={icon.alt} loading='lazy'/>
                     ))}
                 </div>
             </div>

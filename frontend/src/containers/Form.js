@@ -43,7 +43,6 @@ function Form ({setIsModalOpen}) {
                 },
                 body: JSON.stringify(formData)
             })
-            console.log("response:", response)
             const contentType = response.headers.get('Content-Type');
             if (contentType && contentType.includes('application/json')) {
                 const result = await response.json();

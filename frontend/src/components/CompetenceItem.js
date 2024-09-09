@@ -18,7 +18,7 @@ function CompetenceItem ({image, alt, name, filter}) {
 
     return (
         <animated.div style={style} className='item'>
-            <img src={image} alt={alt} className='item_image'/>
+            <img src={image} alt={alt} className='item_image' loading="lazy"/>
             <p>{name}</p>
         </animated.div>
     )
