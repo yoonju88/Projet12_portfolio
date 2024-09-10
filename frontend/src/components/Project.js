@@ -5,7 +5,7 @@ function Project({ title, image, alt, description, icons, href, className, idNam
     return (
         <article className={className} id={idName}>
             <div className="project_img_container">
-                <a href={href} className='project_img'>
+                <a href={href} className='project_img' target="_blank">
                     <img src={image} alt={alt} loading='lazy'/>
                     <span className="overlay"></span>
                 </a>
