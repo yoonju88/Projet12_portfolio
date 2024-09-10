@@ -26,5 +26,4 @@ function Project({ title, image, alt, description, icons, href, className, idNam
         </article>
     )
 }
-
 export default Project
